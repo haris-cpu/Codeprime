@@ -125,16 +125,23 @@
       }
 
       @media (max-width: 576px) {
+        .ms-lg-5, .ms-sm-5 {
+          margin-left: 0 !important;
+        }
+        .ps-5 {
+          padding-left: 1rem !important;
+        }
         .contact-left h2 {
-          font-size: 28px;
+          font-size: 24px !important;
         }
-
-        .contact-left p {
-          font-size: 14px;
+        .contact-container {
+          padding: 1rem !important;
         }
-
-        .icon-text {
-          font-size: 14px;
+        .form-control {
+          padding: 10px !important;
+        }
+        .gradient-btn {
+          width: 100% !important;
         }
       }
 
@@ -152,8 +159,6 @@
         justify-content: center;
         color: #00ced1;
       }
-
-
 
       .navbar-nav {
         display: flex;
@@ -196,7 +201,7 @@
   <body class="text-white container">
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center ms-sm-5" href="#">
+        <a class="navbar-brand d-flex align-items-center ms-sm-5" href="index.html">
           <img
             src="code prime.png"
             alt="Code Prime Logo"
@@ -227,12 +232,10 @@
                 <a class="nav-link text-light" href="blog.html">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light text-nowrap" href="/About.html"
-                  >About Us</a
-                >
+                <a class="nav-link text-light text-nowrap" href="About.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Pricing</a>
+                <a class="nav-link text-light" href="pricing.html">Pricing</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="#">Project</a>
@@ -365,5 +368,29 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Make images responsive
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          img.style.maxWidth = '100%';
+          img.style.height = 'auto';
+        });
+        
+        // Improve form responsiveness
+        function adjustFormLayout() {
+          if (window.innerWidth < 576) {
+            const submitBtn = document.querySelector('.gradient-btn');
+            if (submitBtn) {
+              submitBtn.style.width = '100%';
+              submitBtn.style.maxWidth = 'none';
+            }
+          }
+        }
+        
+        adjustFormLayout();
+        window.addEventListener('resize', adjustFormLayout);
+      });
+    </script>
   </body>
 </html>

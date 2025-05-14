@@ -251,13 +251,41 @@
       .custom-gradient:hover {
         opacity: 0.9;
       }
+
+      /* Add responsive styles for smaller devices */
+      @media (max-width: 576px) {
+        .custom-card {
+          width: 100% !important;
+          max-width: 353px !important;
+          margin: 0 auto 20px auto !important;
+        }
+        .ms-lg-5, .ms-sm-5 {
+          margin-left: 0 !important;
+        }
+        .ps-5 {
+          padding-left: 1rem !important;
+        }
+        .position-relative.w-75 {
+          width: 95% !important;
+        }
+        .fw-bold[style*="width: max-content"] {
+          width: auto !important;
+        }
+        .left-text h1 {
+          font-size: 32px !important;
+          line-height: 1.2 !important;
+        }
+        .custom-heading {
+          line-height: 1.3 !important;
+        }
+      }
     </style>
   </head>
 
   <body class="text-white container">
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img
             src="code prime.png"
             alt="Code Prime Logo"
@@ -293,7 +321,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Pricing</a>
+                <a class="nav-link text-light" href="pricing.html">Pricing</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="#">Project</a>
@@ -451,7 +479,7 @@
             </h3>
             <p>
               To establish its presence in a competitive environment, tracking
-              the site’s performance is an important step..
+              the site's performance is an important step..
             </p>
           </div>
         </div>
@@ -535,7 +563,7 @@
                   -webkit-text-fill-color: transparent;
                 "
               >
-                Let’s Work Together On Your
+                Let's Work Together On Your
               </h2>
               <h2
                 class="fw-bold"
@@ -577,7 +605,7 @@
                 class="d-flex justify-content-between align-items-start flex-column flex-lg-row"
               >
                 <div>
-                  <a class="navbar-brand d-flex align-items-center" href="#">
+                  <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <img
                       src="code prime.png"
                       alt="Code Prime Logo"
@@ -668,5 +696,28 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Make images responsive
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          img.style.maxWidth = '100%';
+          img.style.height = 'auto';
+        });
+        
+        // Improve card responsiveness
+        const cards = document.querySelectorAll('.custom-card');
+        function adjustCardHeight() {
+          if (window.innerWidth < 768) {
+            cards.forEach(card => {
+              card.style.height = 'auto';
+            });
+          }
+        }
+        
+        adjustCardHeight();
+        window.addEventListener('resize', adjustCardHeight);
+      });
+    </script>
   </body>
 </html>
