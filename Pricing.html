@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="lgo.png" />
+    <style>
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1px;
+      }
+
+      .navbar-nav li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+      }
+
+      .request-call-btn {
+        width: 150px;
+        height: 40px;
+        gap: 10px;
+        border-radius: 10px;
+        padding: 10px 12px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #00ced1; /* Optional: set a border color */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #00ced1;
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+        }
+
+        .navbar-nav li {
+          width: 100% !important;
+          margin-bottom: 10px;
+        }
+
+        .navbar-nav.ms-auto {
+          margin-top: 1rem;
+          justify-content: flex-start !important;
+        }
+      }
+
+      .btn-gradient {
+        width: 210px;
+        background: linear-gradient(90deg, #00ced1 0%, #20b2aa 100%);
+        height: 48px;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: #0e1313;
+      }
+
+      .text-gradient {
+        background: linear-gradient(90deg, #a8f8ff, #80f2da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .btn-teal {
+        background-color: #00c2b2;
+        color: rgb(2, 2, 2);
+        border: none;
+      }
+
+      .btn-teal:hover {
+        background-color: #00aa9a;
+      }
+
+      .custom-section {
+        padding: 60px 20px;
+      }
+
+      .left-text h1 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 90px;
+        letter-spacing: -0.02em;
+      }
+
+      .lead {
+        font-family: "Plus Jakarta Sans";
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 33px;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        opacity: 0.8;
+        color: #e0ffff;
+      }
+      .custom-gradient {
+        background: linear-gradient(90deg, #00ced1 0%, #20b2aa 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+        text-decoration: none;
+      }
+
+      .custom-gradient:hover {
+        opacity: 0.9;
+      }
+      @media (max-width: 768px) {
+        /* Center heading on mobile */
+        .left-text {
+          text-align: center !important;
+        }
+
+        /* Remove max-width constraint on mobile */
+        .left-text h1[style*="max-content"] {
+          width: auto !important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        /* Center button in mobile view */
+        .right-text {
+          text-align: center;
+        }
+
+        /* Adjust button positioning */
+        .btn-gradient {
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: block;
+          max-width: 210px;
+        }
+
+        /* Center lead text */
+        .lead {
+          text-align: center !important;
+          padding: 0 15px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        /* Further adjust heading size */
+        .left-text h1 {
+          font-size: 32px !important;
+          line-height: 1.2 !important;
+        }
+
+        /* Adjust button size */
+        .btn-gradient {
+          width: 100% !important;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-white container" style="background-color: #0e1313">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center ms-sm-5" href="#">
+          <img
+            src="code prime.png"
+            alt="Code Prime Logo"
+            height="48px"
+            width="171px"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div
+            class="d-lg-flex justify-content-between align-items-center w-100"
+          >
+            <!-- Centered Menu Items -->
+            <ul class="navbar-nav mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="Services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light text-nowrap" href="/About.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Project</a>
+              </li>
+            </ul>
+
+            <!-- Right-side Icons and Button -->
+            <ul class="navbar-nav ms-auto align-items-center">
+              <!-- Search icon with right margin -->
+              <li class="nav-item d-flex align-items-center me-3 me-sm-4">
+                <i class="bi bi-search text-secondary fs-5"></i>
+              </li>
+
+              <!-- Button with right margin -->
+              <li class="nav-item me-3 me-sm-4">
+                <a
+                  class="btn nav-btn request-call-btn text-nowrap"
+                  href="Contact.html"
+                  >Request a Call</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="custom-section ms-sm-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side -->
+          <div
+            class="col-lg-6 left-text mb-4 mb-lg-0 text-lg-start text-center position-relative"
+          >
+            <div
+              class="bg-blur-shape position-absolute top-50 start-50 translate-middle"
+            ></div>
+            <small class="text-uppercase d-block mb-2">Home/Pricing</small>
+            <h1 class="display-4 fw-bold mt-2 mb-0 text-gradient text-break">
+              Smart pricing,
+            </h1>
+            <h1
+              class="display-4 fw-bold text-gradient"
+              style="width: max-content"
+            >
+              quality results.
+            </h1>
+          </div>
+
+          <!-- Right Side -->
+          <div class="col-lg-6 right-text">
+            <p class="lead ms-lg-3 text-center text-lg-start">
+              Engineering High-Performance Digital Experiences.<br />
+              Creating Smart, Seamless Solutions.<br />
+              Delivering Excellence In Every Project.
+            </p>
+            <button
+              class="btn btn-teal btn-gradient px-4 py-2 mt-3 shadow ms-lg-3"
+            >
+              Schedule a Meeting
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <!-- Row 1 -->
+      <div class="row g-4 mb-4">
+        <!-- Card 1 - Mean/Mern -->
+        <div class="col-12 col-md-6 col-lg-4">
+  <div class="card text-white" 
+       style="height: 400px; 
+              width: 353px; 
+              border-radius: 1.5rem;
+              background: linear-gradient(164.95deg, 
+                rgba(43, 255, 255, 0.1) 0%,
+                rgba(43, 255, 255, 0.02) 50%,
+                rgba(43, 255, 255, 0.06) 100%);">
+    <div class="card-body" 
+         style="padding: 25px; 
+                display: flex; 
+                flex-direction: column; 
+                justify-content: space-between;">
+      
+      <!-- Icon Section -->
+      <div style="margin-bottom: 20px; padding-left: 15px">
+        <img src="pricing/f1.png" 
+             alt="Icon" 
+             style="width: 136px; height: 40px; max-width: 100%">
+      </div>
+
+      <!-- Text Content -->
+      <div style="padding-left: 15px; flex-grow: 1">
+        <h5 class="card-title" 
+            style="font-family: 'Plus Jakarta Sans';
+                   font-weight: 700;
+                   font-size: 20px;
+                   line-height: 1.3;
+                   letter-spacing: -0.02em;
+                   color: #51a5a5;
+                   margin-bottom: 15px;">
+          PHP / Laravel / Codeigniter
+        </h5>
+        
+        <p class="card-text" 
+           style="font-family: 'Space Grotesk';
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1.5;
+                  color: #e0ffff;
+                  margin-bottom: 20px;">
+          The flexibility of both stacks is a smooth development process
+          with JavaScript on both ends. We craft a modern, highly
+          interactive and scalable NoSQL database solution.
+        </p>
+      </div>
+
+      <!-- Bottom Section -->
+      <div style="padding-left: 15px">
+        <img src="l1.png" 
+             alt="Tech Stack" 
+             style="max-width: 230px; width: 100%; margin-bottom: 15px">
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <h3 style="color: #1cb5af;
+                     font-size: 48px;
+                     margin: 0;
+                     display: flex;
+                     align-items: baseline;
+                     gap: 4px;
+                     white-space: nowrap;">
+            $40
+            <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+          </h3>
+          <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+            Get Services
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+         <!-- Card 2 - .Net -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="php.png" alt="Icon" style="width: 40px; height: 40px">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            .Net
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            The flexibility of both stacks is a smooth development process
+                            with JavaScript on both ends. We craft a modern, highly
+                            interactive and scalable NoSQL database solution.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 - WordPress Custom -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="pricing/f2.png" alt="Icon" style="width: 40px; height: 40px; max-width: 100%">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            WordPress Custom
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            The flexibility of both stacks is a smooth development process
+                            with JavaScript on both ends. We craft a modern, highly
+                            interactive and scalable NoSQL database solution.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row g-4 mb-4">
+        <!-- Card 4 - Mean/Mern -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="pricing/f3.png" alt="Icon" style="width: 232px; height: 40px">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            Mean / Mern
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            The flexibility of both stacks is a smooth development process
+                            with JavaScript on both ends. We craft a modern, highly
+                            interactive and scalable NoSQL database solution.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 - Angular -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="pricing/ang.png" alt="Icon" style="width: 40px; height: 40px">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            Angular
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            The flexibility of both stacks is a smooth development process
+                            with JavaScript on both ends. We craft a modern, highly
+                            interactive and scalable NoSQL database solution.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 - React -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="pricing/f5.png" alt="Icon" style="width: 40px; height: 40px">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            React
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            The flexibility of both stacks is a smooth development process
+                            with JavaScript on both ends. We craft a modern, highly
+                            interactive and scalable NoSQL database solution.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row g-4 mb-4">
+        <!-- Card 7 - Shopify -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="pricing/f7.png" alt="Python" style="width: 40px; height: 40px">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            Shopify
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            Robust backend solutions with Python's versatility and
+                            Django's powerful framework. Scalable web applications with
+                            clean architecture.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 - SEO -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card text-white" 
+                 style="height: 400px; 
+                        width: 353px; 
+                        border-radius: 1.5rem;
+                        background: linear-gradient(164.95deg, 
+                          rgba(43, 255, 255, 0.1) 0%,
+                          rgba(43, 255, 255, 0.02) 50%,
+                          rgba(43, 255, 255, 0.06) 100%);">
+                <div class="card-body" 
+                     style="padding: 25px; 
+                            display: flex; 
+                            flex-direction: column; 
+                            justify-content: space-between;">
+                    
+                    <!-- Icon Section -->
+                    <div style="margin-bottom: 20px; padding-left: 15px">
+                        <img src="pricing/seo.png" alt="Vue" style="width: 40px; height: 40px">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div style="padding-left: 15px; flex-grow: 1">
+                        <h5 class="card-title" 
+                            style="font-family: 'Plus Jakarta Sans';
+                                   font-weight: 700;
+                                   font-size: 20px;
+                                   line-height: 1.3;
+                                   letter-spacing: -0.02em;
+                                   color: #51a5a5;
+                                   margin-bottom: 15px;">
+                            Search Engine Optimization
+                        </h5>
+                        
+                        <p class="card-text" 
+                           style="font-family: 'Space Grotesk';
+                                  font-weight: 400;
+                                  font-size: 16px;
+                                  line-height: 1.5;
+                                  color: #e0ffff;
+                                  margin-bottom: 20px;">
+                            Progressive JavaScript framework for building modern user
+                            interfaces. Flexible ecosystem that scales between library and
+                            framework.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Section -->
+                    <div style="padding-left: 15px">
+                        <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                        <div style="display: flex; justify-content: space-between; align-items: center">
+                            <h3 style="color: #1cb5af;
+                                       font-size: 48px;
+                                       margin: 0;
+                                       display: flex;
+                                       align-items: baseline;
+                                       gap: 4px;
+                                       white-space: nowrap;">
+                                $40
+                                <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                            </h3>
+                            <span style="font-weight: 600; color: #1CB5AF; cursor: pointer; white-space: nowrap; margin-top: 20px;">
+                                Get Services
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 - WordPress -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="card text-white" 
+         style="height: 400px; 
+                width: 353px; 
+                border-radius: 1.5rem;
+                background: linear-gradient(164.95deg, 
+                  rgba(43, 255, 255, 0.1) 0%,
+                  rgba(43, 255, 255, 0.02) 50%,
+                  rgba(43, 255, 255, 0.06) 100%);">
+        <div class="card-body" 
+             style="padding: 25px; 
+                    display: flex; 
+                    flex-direction: column; 
+                    justify-content: space-between;">
+            
+            <!-- Icon Section -->
+            <div style="margin-bottom: 20px; padding-left: 15px; text-align: left">
+                <img src="pricing/f9.png" alt="WordPress" style="width: 40px; height: 40px">
+            </div>
+
+            <!-- Text Content -->
+            <div style="padding-left: 15px; flex-grow: 1; text-align: left">
+                <h5 class="card-title" 
+                    style="font-family: 'Plus Jakarta Sans';
+                           font-weight: 700;
+                           font-size: 20px;
+                           line-height: 1.3;
+                           letter-spacing: -0.02em;
+                           color: #51a5a5;
+                           margin-bottom: 15px;">
+                    Pay-Per-Click
+                </h5>
+                
+                <p class="card-text" 
+                   style="font-family: 'Space Grotesk';
+                          font-weight: 400;
+                          font-size: 16px;
+                          line-height: 1.5;
+                          color: #e0ffff;
+                          margin-bottom: 20px;">
+                    Custom WordPress solutions with theme development and plugin
+                    customization. SEO-optimized websites with easy content
+                    management.
+                </p>
+            </div>
+
+            <!-- Bottom Section -->
+            <div style="padding-left: 15px">
+                <img src="l1.png" alt="Tech Stack" style="max-width: 230px; width: 100%; margin-bottom: 15px">
+                <div style="display: flex; justify-content: space-between; align-items: center">
+                    <h3 style="color: #1cb5af;
+                               font-size: 48px;
+                               margin: 0;
+                               display: flex;
+                               align-items: baseline;
+                               gap: 4px;
+                               white-space: nowrap;">
+                        $40
+                        <small class="text-white-50" style="font-size: 16px; line-height: 1">/hr</small>
+                    </h3>
+                    <span style="font-weight: 600; 
+                                color: #1CB5AF; 
+                                cursor: pointer; 
+                                white-space: nowrap;">
+                        Get Services
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+     <div class="d-flex justify-content-center mb-3" style="position: relative; top: 50px">
+    <!-- Background image only inside this box -->
+    <div class="position-relative w-75"
+         style="border-radius: 20px;
+                overflow: hidden;
+                background-image: url('bg1.png');
+                background-size: cover;
+                background-position: center">
+        
+        <!-- Optional dim overlay -->
+        <div style="position: absolute;
+                   top: 0;
+                   left: 0;
+                   width: 100%;
+                   height: 100%;
+                   background-color: rgba(0, 0, 0, 0.4);
+                   z-index: 0"></div>
+
+        <!-- Content Box -->
+        <div class="row justify-content-center p-4 text-light position-relative"
+             style="z-index: 1;
+                    border-radius: 20px;
+                    background: linear-gradient(164.95deg, 
+                      rgba(43, 255, 255, 0.1) 0%,
+                      rgba(43, 255, 255, 0.02) 50%,
+                      rgba(43, 255, 255, 0.06) 100%)">
+            
+            <div class="col-lg-8 col-md-10 text-center">
+                <!-- Updated Heading -->
+                <h2 class="fw-bold"
+                    style="font-family: 'Plus Jakarta Sans', sans-serif;
+                           font-weight: 700;
+                           font-size: 44px;
+                           line-height: 90px;
+                           letter-spacing: -0.02em;
+                           text-align: center;  width: max-content;
+                           text-transform: capitalize;
+                           background: linear-gradient(90deg, #baffff 0%, #779494 100%);
+                           -webkit-background-clip: text;
+                           -webkit-text-fill-color: transparent;
+                           margin-bottom: 20px"
+                        >
+                    Price not fitting your needs?
+                </h2>
+
+                <!-- New Paragraph -->
+                <p style="font-family: 'Plus Jakarta Sans', sans-serif;
+                          font-weight: 400;
+                          font-size: 18px;
+                          line-height: 33px;
+                          letter-spacing: 0;
+                          text-align: center;
+                          text-transform: capitalize;width: 701px;height: 66px;opacity: 80%;
+                          color:  #E0FFFF;
+;
+                          max-width: 600px;
+                          margin: 0 auto 30px",
+                          >
+                    We understand that every project is unique. Our pricing is flexible 
+                    and tailored to fit your specific requirements.
+                </p>
+
+                <!-- Button -->
+                <div class="mt-4">
+                  <a href="#contact" 
+   class="btn btn-info px-4 py-2 fw-semibold" 
+   style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%) !important;
+          box-shadow: 0px 4px 9px 0px #00CED11A, 
+                      0px 17px 17px 0px #00CED117, 
+                      0px 37px 22px 0px #00CED10D, 
+                      0px 66px 26px 0px #00CED103, 
+                      0px 103px 29px 0px #00CED100;
+          color: #010101 !important;
+          border: none !important;
+          transition: all 0.3s ease;">
+    Contact Us
+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ <section
+      class="footer-custom-bg text-light mt-sm-5"
+      style="position: relative; top: 60px"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div
+              class="d-flex justify-content-between align-items-start flex-column flex-lg-row"
+            >
+              <div>
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                  <img
+                    src="code prime.png"
+                    alt="Code Prime Logo"
+                    height="48px"
+                    width="171px"
+                  />
+                </a>
+                <img
+                  src="footer.png"
+                  alt="Code Prime Logo"
+                  class="img-fluid mb-1 pt-3"
+                  style="max-width: 150px; margin-left: 10px; margin-top: 10px"
+                />
+              </div>
+              <div class="mt-3 mt-lg-0 ms-lg-5 px-4">
+                <div class="d-flex flex-column mt-sm-3 ps-5">
+                  <a href="#" class="text-white-50 text-decoration-none mb-2"
+                    >Services</a
+                  >
+                  <a href="#" class="text-white-50 text-decoration-none mb-2"
+                    >Teams</a
+                  >
+                  <a href="#" class="text-white-50 text-decoration-none mb-2"
+                    >Teams</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4 text-lg-start px-5">
+            <div class="d-flex flex-column ms-lg-5 mt-sm-3 ps-5">
+              <a href="#" class="text-white-50 text-decoration-none mb-2"
+                >About Us</a
+              >
+              <a href="#" class="text-white-50 text-decoration-none mb-2"
+                >Projects</a
+              >
+              <a href="#" class="text-white-50 text-decoration-none mb-2"
+                >Projects</a
+              >
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="d-flex flex-column ms-2 mt-sm-3">
+              <a href="#" class="text-white-50 text-decoration-none mb-2"
+                >Pricing</a
+              >
+              <a href="#" class="text-white-50 text-decoration-none mb-2"
+                >Blogs</a
+              >
+              <a href="#" class="text-white-50 text-decoration-none mb-2"
+                >Blogs</a
+              >
+            </div>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="d-flex flex-column mt-sm-3">
+              <a href="#" class="text-white-50 text-decoration-none mb-2">
+                <i class="bi bi-geo-alt-fill me-2"></i>Bahria Town, Islamabad,
+                Pakistan
+              </a>
+              <a href="#" class="text-white-50 text-decoration-none mb-2">
+                <i class="bi bi-telephone-fill me-2"></i>+1 (786) 348-7052
+              </a>
+              <a href="#" class="text-white-50 text-decoration-none mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>info@primecode.ai
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="row">
+          <img src="tech/we.png" alt="footer" class="img-fluid mt-sm-3" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
