@@ -17,6 +17,36 @@
       overflow-x: hidden; /* Prevents horizontal scroll */
       background-color: #0E1313;
       color: #fff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Consistent transition for all hover effects */
+    a, button, .card, .btn {
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
+    }
+
+    /* Improved card hover effect */
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(43, 255, 255, 0.1);
+    }
+
+    /* Refined gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
     .full-width-image {
@@ -169,13 +199,13 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center  ms-sm-5" href="index.html">
+        <a class="navbar-brand d-flex align-items-center ms-sm-5" href="index.html">
           <img
             src="code prime.png"
             alt="Code Prime Logo"
             height="48px"
             width="171px"
-
+            style="filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));"
           />
         </a>
 
@@ -184,6 +214,7 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          style="border-color: rgba(0, 206, 209, 0.5);"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -195,19 +226,19 @@
             <!-- Centered Menu Items -->
             <ul class="navbar-nav mx-auto text-center">
               <li class="nav-item">
-               <a class="nav-link text-light" href="Services.html">Services</a>
+               <a class="nav-link text-light" href="Services.html" style="font-weight: 500; transition: color 0.3s ease;">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="blog.html">Blog</a>
+                <a class="nav-link text-light" href="blog.html" style="font-weight: 500; transition: color 0.3s ease;">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light text-nowrap" href="About.html">About Us</a>
+                <a class="nav-link text-light text-nowrap" href="About.html" style="font-weight: 500; transition: color 0.3s ease;">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="pricing.html">Pricing</a>
+                <a class="nav-link text-light" href="pricing.html" style="font-weight: 500; transition: color 0.3s ease;">Pricing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="Project.html">Project</a>
+                <a class="nav-link text-light" href="Project.html" style="font-weight: 500; transition: color 0.3s ease;">Project</a>
               </li>
             </ul>
 
@@ -215,14 +246,13 @@
             <ul class="navbar-nav ms-auto align-items-center">
               <!-- Search icon with right margin -->
               <li class="nav-item d-flex align-items-center me-3 me-sm-4">
-                <i class="bi bi-search text-secondary fs-5"></i>
+                <i class="bi bi-search text-secondary fs-5" style="cursor: pointer; transition: color 0.3s ease;"></i>
               </li>
 
               <!-- Button with right margin -->
              <li class="nav-item me-3 me-sm-4">
-  <a class="btn nav-btn request-call-btn text-nowrap" href="#">Request a Call</a>
-</li>
-
+                <a class="btn nav-btn request-call-btn text-nowrap" href="#" style="transition: all 0.3s ease;">Request a Call</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -238,15 +268,15 @@
         <!-- Very blur green background -->
         <div class="blur-background" 
              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-                    background: #519192; filter: blur(100px); z-index: 0;"></div>
+                    background: #519192; filter: blur(100px); z-index: 0; opacity: 0.8;"></div>
   
         <!-- Content above blur -->
         <div style="position: relative; z-index: 1;">
-          <p class="small ms-lg-5 pb-5 mx-2 mx-lg-0" 
-             style="color: #cccccc; max-width: 90%;">Web Development Solution</p>
+          <p class="small ms-lg-5 pb-4 mx-2 mx-lg-0" 
+             style="color: #cccccc; max-width: 90%; letter-spacing: 1px; text-transform: uppercase; font-weight: 500;">Web Development Solution</p>
          <h1 class="display-5 ms-lg-5 hero-heading" 
              style="color: #baffff; font-weight: 700; font-size: 72px; 
-                    width: 606px; position: relative; bottom: 25px;">
+                    width: 606px; position: relative; bottom: 25px; text-shadow: 0 0 20px rgba(186, 255, 255, 0.3);">
             Prime Code For<br>Prime Solutions
          </h1>
         </div>
@@ -256,11 +286,11 @@
         <div class="ms-lg-5">
           <p class="pt-4 text-light text-center text-lg-start responsive-paragraph" 
              style="font-weight: 400; font-size: 20px; line-height: 33px; 
-                    width: 497px; height: 99px; opacity: 0.8;">
+                    width: 497px; height: 99px; opacity: 0.9; letter-spacing: 0.3px;">
             Engineering High-Performance Digital Experiences. Creating Smart, Seamless Solutions. Delivering Excellence In Every Project.
           </p>
-          <a href="#" class="btn btn-info text-dark fw-semibold px-2 py-3 mt-sm-5 responsive-btn" 
-             style="background-color: #00CED1;">
+          <a href="#" class="btn custom-gradient text-dark fw-semibold px-4 py-3 mt-sm-5 responsive-btn" 
+             style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%); border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2);">
             Schedule a Meeting
           </a>
         </div>
@@ -286,21 +316,16 @@
   <main class="container">
     <div class="row g-4">
       <!-- Team Spirit -->
-      <div class="col-md-6 col-lg-3"  >
-        <div class="card border-0 rounded-5 h-100 shadow-sm" style="background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);">
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 rounded-4 h-100 shadow-sm" style="background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.12) 0%, rgba(43, 255, 255, 0.03) 50%, rgba(43, 255, 255, 0.08) 100%); backdrop-filter: blur(10px);">
           <div class="card-body p-4 py-5 text-center">
-            <img src="i2.png" alt="Team Spirit" class="img-fluid w-25 mb-3">
-
-            <h3 class="h4">
-                <span style="background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-                             -webkit-background-clip: text;
-                             -webkit-text-fill-color: transparent;
-                             display: inline-block;">
-                  The Team Spirit
-                </span>
-              </h3>
-              
-            <p style="color: #e0ffff;">Our Professional Individuals Collaborate With And Drive Each Other To Achieve Big, Working In Perfect Syncronicity.</p>
+            <div class="mb-4 d-flex justify-content-center">
+              <img src="i2.png" alt="Team Spirit" class="img-fluid" style="width: 70px; filter: drop-shadow(0 4px 6px rgba(0, 206, 209, 0.2));">
+            </div>
+            <h3 class="h4 mb-3">
+              <span class="gradient-text">The Team Spirit</span>
+            </h3>
+            <p style="color: #e0ffff; line-height: 1.6;">Our Professional Individuals Collaborate With And Drive Each Other To Achieve Big, Working In Perfect Syncronicity.</p>
           </div>
         </div>
       </div>
@@ -374,50 +399,51 @@
 
 <section class="text-white mt-8 pt-5 pb-5" style="margin-top: 90px;" id="milestone-section">
   <div class="container">
-      <div class="row align-items-center">
-          <!-- Left side content -->
-          <div class="col-lg-6 text-start ps-5 ">
-              <h2 class="text-start mb-3 "  style="color: #BAFFFF;">Progress & Milestone</h2>
+    <div class="row align-items-center">
+      <!-- Left side content -->
+      <div class="col-lg-6 text-start ps-5">
+        <h2 class="text-start mb-4 gradient-text" style="font-weight: 600;">Progress & Milestone</h2>
 
-              <!-- Stats container with gradient -->
-              <div class="p-4 bg-dark text-center rounded shadow-sm"
-                  style="background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);">
-                  
-                  <div class="row text-center position-relative">
-                      <!-- First Stat -->
-                      <div class="col position-relative">
-                          <h3 class="display-4 fw-semibold">
-                              <span class="count-number" data-target="22">0</span>+
-                          </h3>
-                          <p>Years of Experience</p>
-                          <div class="position-absolute top-0 end-0 h-100" style="width:0.5px; background-color:#00CED1;"></div>
-                      </div>
+        <!-- Stats container with gradient -->
+        <div class="p-4 bg-dark text-center rounded-4 shadow" 
+             style="background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.15) 0%, rgba(43, 255, 255, 0.04) 50%, rgba(43, 255, 255, 0.09) 100%); 
+                    backdrop-filter: blur(10px); border: 1px solid rgba(43, 255, 255, 0.1);">
+          
+          <div class="row text-center position-relative">
+            <!-- First Stat -->
+            <div class="col position-relative">
+              <h3 class="display-4 fw-semibold" style="background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <span class="count-number" data-target="22">0</span>+
+              </h3>
+              <p>Years of Experience</p>
+              <div class="position-absolute top-0 end-0 h-100" style="width:0.5px; background-color:#00CED1; opacity: 0.6;"></div>
+            </div>
 
-                      <!-- Second Stat -->
-                      <div class="col position-relative">
-                          <h3 class="display-4 fw-semibold">
-                              <span class="count-number" data-target="1000">0</span>+
-                          </h3>
-                          <p>Satisfied Customer</p>
-                          <div class="position-absolute top-0 end-0 h-100" style="width:0.5px; background-color:#00CED1; "></div>
-                      </div>
+            <!-- Second Stat -->
+            <div class="col position-relative">
+              <h3 class="display-4 fw-semibold" style="background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <span class="count-number" data-target="1000">0</span>+
+              </h3>
+              <p>Satisfied Customer</p>
+              <div class="position-absolute top-0 end-0 h-100" style="width:0.5px; background-color:#00CED1; opacity: 0.6;"></div>
+            </div>
 
-                      <!-- Third Stat -->
-                      <div class="col">
-                          <h3 class="display-4 fw-semibold">
-                              <span class="count-number" data-target="100">0</span>+
-                          </h3>
-                          <p>Brilliant Projects</p>
-                      </div>
-                  </div>
-              </div>
+            <!-- Third Stat -->
+            <div class="col">
+              <h3 class="display-4 fw-semibold" style="background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <span class="count-number" data-target="100">0</span>+
+              </h3>
+              <p>Brilliant Projects</p>
+            </div>
           </div>
-
-          <!-- Right side image -->
-          <div class="col-lg-6 text-center">
-              <img src="kl.png" alt="Progress Image" class="img-fluid w-90">
-          </div>
+        </div>
       </div>
+
+      <!-- Right side image -->
+      <div class="col-lg-6 text-center">
+        <img src="kl.png" alt="Progress Image" class="img-fluid w-90" style="filter: drop-shadow(0 10px 20px rgba(0, 206, 209, 0.15));">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -606,91 +632,76 @@
 
 
 <!-- Wrapper just for background image -->
-<div class="d-flex justify-content-center mb-3" style="position: relative;   top: 50px;">
+<div class="d-flex justify-content-center mb-5" style="position: relative; top: 50px;">
 
   <!-- Background image only inside this box -->
   <div class="position-relative w-75" 
-       style="border-radius: 20px; overflow: hidden; background-image: url('bg1.png'); background-size: cover; background-position: center;">
+       style="border-radius: 20px; overflow: hidden; background-image: url('bg1.png'); background-size: cover; background-position: center; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);">
 
     <!-- Optional dim overlay -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                background-color: rgba(0, 0, 0, 0.4); z-index: 0;"></div>
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 206, 209, 0.2)); z-index: 0;"></div>
 
     <!-- Content Box -->
-    <div class="row justify-content-center p-4 text-light position-relative"
+    <div class="row justify-content-center p-5 text-light position-relative"
          style="z-index: 1; border-radius: 20px;
                 background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, 
                 rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
 
-      <div class="col-lg-8 col-md-10 text-center  "  >
-        <h2 class="fw-bold" style="
-            background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;">
+      <div class="col-lg-8 col-md-10 text-center">
+        <h2 class="fw-bold mb-1 gradient-text" style="font-size: 2.5rem;">
           Let's Work Together On Your
         </h2>
-        <h2 class="fw-bold" style="
-            background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;">
+        <h2 class="fw-bold mb-4 gradient-text" style="font-size: 2.5rem;">
           Next Project
         </h2>
 
         <div class="mt-4">
          <a href="#contact" 
-   class="btn btn-info px-4 py-2 fw-semibold" 
-   style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%) !important;
-          box-shadow: 0px 4px 9px 0px #00CED11A, 
-                      0px 17px 17px 0px #00CED117, 
-                      0px 37px 22px 0px #00CED10D, 
-                      0px 66px 26px 0px #00CED103, 
-                      0px 103px 29px 0px #00CED100;
-          color: #0a0a0a !important;
-          border: none !important;
-          transition: all 0.3s ease;">
-    Contact Us
-</a>
+           class="btn px-4 py-3 fw-semibold" 
+           style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%) !important;
+                  box-shadow: 0px 4px 15px rgba(0, 206, 209, 0.3); 
+                  color: #0a0a0a !important;
+                  border: none !important;
+                  border-radius: 10px;
+                  font-size: 1.1rem;
+                  letter-spacing: 0.5px;
+                  transition: all 0.3s ease;">
+            Contact Us
+         </a>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
 
 
 
- <section class="footer-custom-bg text-light mt-sm-5" style="position: relative;   top: 60px;">
+ <section class="footer-custom-bg text-light mt-sm-5" style="position: relative; top: 60px; padding-top: 30px; background: linear-gradient(to top, #0a0a0a, #0E1313);">
         <div class="container">
           <div class="row">
             <!-- Column 1 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
-              <div
-                class="d-flex justify-content-between align-items-start flex-column flex-lg-row"
-              >
+              <div class="d-flex justify-content-between align-items-start flex-column flex-lg-row">
                 <div>
-                  <a class="navbar-brand d-flex align-items-center  mt-sm-1" href="#">
-                    <img
-                      src="code prime.png"
-                      alt="Code Prime Logo"
-                      height="48px"
-                      width="161px"
-                    />
+                  <a class="navbar-brand d-flex align-items-center mt-sm-1" href="#">
+                    <img src="code prime.png" alt="Code Prime Logo" height="48px" width="161px" style="filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));" />
                   </a>
-                  <div class="d-flex gap-2 mt-3" style="margin-left: 18px; ">
-                            <a href="#" class="social-icon">
-                                <img src="footer/facebook.png" alt="fb" style="width: 32.99px; height: 32.42pxpx;">
-                            </a>
-                            <a href="#" class="social-icon">
-                                <img src="footer/Instagram (1).png" alt="Instagram" style="width: 32.99px; height: 32.42pxpx;">
-                            </a>
-                            <a href="#" class="social-icon">
-                                <img src="footer/Twitter (1).png" alt="X (Twitter)" style="width: 32.99px; height: 32.42pxpx;">
-                            </a>
-                            <a href="#" class="social-icon">
-                                <img src="footer/Linkedin.png" alt="LinkedIn"style="width: 32.99px; height: 32.42pxpx;">
-                            </a>
-                        </div>
+                  <div class="d-flex gap-3 mt-4" style="margin-left: 18px;">
+                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
+                      <img src="footer/facebook.png" alt="fb" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    </a>
+                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
+                      <img src="footer/Instagram (1).png" alt="Instagram" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    </a>
+                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
+                      <img src="footer/Twitter (1).png" alt="X (Twitter)" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    </a>
+                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
+                      <img src="footer/Linkedin.png" alt="LinkedIn" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    </a>
+                  </div>
                 </div>
                 <div class="mt-3 mt-lg-0 ms-lg-5 px-4">
                   <div class="d-flex flex-column mt-sm-3 ps-5">
@@ -760,7 +771,10 @@
 
           <!-- Bottom Row -->
           <div class="row">
-            <img src="tech/we.png" alt="footer" class="img-fluid mt-sm-3" style="max-width: 100%;" />
+            <img src="tech/we.png" alt="footer" class="img-fluid mt-sm-4 mb-3" style="max-width: 100%;" />
+            <div class="text-center pb-3 pt-2" style="color: #779494; font-size: 0.9rem;">
+              © 2023 Code Prime. All Rights Reserved.
+            </div>
           </div>
         </div>
       </section>
