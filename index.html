@@ -17,6 +17,31 @@
       overflow-x: hidden; /* Prevents horizontal scroll */
       background-color: #0E1313;
       color: #fff;
+      scroll-behavior: smooth; /* Added for smooth scrolling */
+    }
+
+    /* Custom scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #0E1313;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 206, 209, 0.5);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 206, 209, 0.8);
+    }
+
+    /* Hide scrollbar for the pricing cards wrapper but keep functionality */
+    .d-flex.flex-nowrap.gap-5.align-items-start::-webkit-scrollbar {
+      display: none;
     }
 
     .full-width-image {
@@ -55,23 +80,103 @@
         text-align: center;
       }
 
+      .navbar-nav a.nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
 
+      .navbar-nav a.nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #00CED1;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+
+      .navbar-nav a.nav-link:hover::after {
+        width: 70%;
+        opacity: 1;
+      }
 
       .request-call-btn {
-  width: 150px;
-  height: 40px;
-  gap: 10px;
-  border-radius: 10px;
-  padding: 10px 12px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #00CED1; /* Optional: set a border color */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #00CED1;
-}
+        width: 150px;
+        height: 40px;
+        gap: 10px;
+        border-radius: 10px;
+        padding: 10px 12px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #00CED1; /* Optional: set a border color */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #00CED1;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
 
+      .request-call-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 206, 209, 0.1);
+        transition: all 0.5s ease;
+        z-index: -1;
+      }
+
+      .request-call-btn:hover::before {
+        left: 0;
+      }
+
+      .request-call-btn:hover {
+        box-shadow: 0 0 15px rgba(0, 206, 209, 0.3);
+        transform: translateY(-2px);
+      }
+
+      /* Enhance card visuals */
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 206, 209, 0.1) !important;
+      }
+
+      /* Better button styles */
+      .btn-info, .btn-outline-info {
+        transition: all 0.3s ease !important;
+      }
+
+      .btn-info:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 206, 209, 0.3) !important;
+      }
+
+      .btn-outline-info:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2) !important;
+      }
+
+      /* Social media icon hover effects */
+      .social-icon {
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .social-icon:hover {
+        transform: translateY(-3px);
+        filter: brightness(1.2);
+      }
 
       @media (max-width: 991.98px) {
         .navbar-nav {
@@ -161,9 +266,13 @@
   opacity: 0.9;
 }
 
-
+/* Removed duplicate arrow-animate styles */
       
   </style>
+
+  <!-- Add preconnect for improved font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body class=" text-white    container"    style="background-color: #0E1313;">
 
@@ -439,9 +548,9 @@
             ">Our no-fuss approach to staff augmentation</h2>
 
 <div class="text-center" style="position: relative;">
-  <img src="qwe.png" alt="Illustration" class="img-fluid" style="max-width: 80px;">
+  <img src="qwe.png" alt="Illustration" id="animatedImage" class="img-fluid arrow-animate" style="max-width: 80px;">
 
-  <div style="
+  <div id="arrowElement" class="arrow-animate" style="
     position: absolute;
     top: 50%;
     left: 50%;
@@ -833,9 +942,140 @@ function animateNumbers() {
     window.addEventListener('load', updateNumbers);
 }
 
+// Add keyframe animation for float effect
+document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .arrow-animate {
+      transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    .arrow-animate.visible {
+      transform: translateY(15px);
+      opacity: 1;
+    }
+    
+    /* Special case for the arrow which needs to maintain centering */
+    #arrowElement.arrow-animate {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+    
+    #arrowElement.arrow-animate.visible {
+      transform: translate(-50%, -50%) translateY(25px);
+    }
+    
+    /* Smooth animation with more keyframes for image */
+    @keyframes imageFloat {
+      0% { transform: translateY(15px); }
+      10% { transform: translateY(16px); }
+      20% { transform: translateY(18px); }
+      30% { transform: translateY(20px); }
+      40% { transform: translateY(22px); }
+      50% { transform: translateY(24px); }
+      60% { transform: translateY(25px); }
+      70% { transform: translateY(24px); }
+      80% { transform: translateY(22px); }
+      90% { transform: translateY(18px); }
+      100% { transform: translateY(15px); }
+    }
+    
+    /* Special keyframes for the arrow to maintain centering */
+    @keyframes arrowFloat {
+      0% { transform: translate(-50%, -50%) translateY(15px); }
+      10% { transform: translate(-50%, -50%) translateY(16px); }
+      20% { transform: translate(-50%, -50%) translateY(18px); }
+      30% { transform: translate(-50%, -50%) translateY(20px); }
+      40% { transform: translate(-50%, -50%) translateY(22px); }
+      50% { transform: translate(-50%, -50%) translateY(24px); }
+      60% { transform: translate(-50%, -50%) translateY(25px); }
+      70% { transform: translate(-50%, -50%) translateY(24px); }
+      80% { transform: translate(-50%, -50%) translateY(22px); }
+      90% { transform: translate(-50%, -50%) translateY(18px); }
+      100% { transform: translate(-50%, -50%) translateY(15px); }
+    }
+  </style>
+`);
+
+// Update animation application
+function setupArrowAnimation() {
+  const animatedImage = document.getElementById('animatedImage');
+  const arrowElement = document.getElementById('arrowElement');
+  
+  function checkElementsVisibility() {
+    if (isElementInViewport(animatedImage)) {
+      // Animate the image
+      animatedImage.classList.add('visible');
+      setTimeout(() => {
+        animatedImage.style.animation = "imageFloat 3s infinite ease-in-out";
+      }, 1500);
+      
+      // Animate the arrow
+      arrowElement.classList.add('visible');
+      setTimeout(() => {
+        arrowElement.style.animation = "arrowFloat 3s infinite ease-in-out";
+      }, 1500);
+    } else {
+      // Reset animations when not in viewport
+      animatedImage.classList.remove('visible');
+      animatedImage.style.animation = "";
+      
+      arrowElement.classList.remove('visible');
+      arrowElement.style.animation = "";
+    }
+  }
+  
+  // Check on load, scroll and resize
+  window.addEventListener('scroll', checkElementsVisibility);
+  window.addEventListener('resize', checkElementsVisibility);
+  window.addEventListener('load', checkElementsVisibility);
+  
+  // Initial check
+  checkElementsVisibility();
+}
+
 // Initialize when document loads
 document.addEventListener('DOMContentLoaded', function() {
-    animateNumbers();
+  animateNumbers();
+  setupArrowAnimation();
+});
+
+// Add smooth reveal effects to elements when scrolling
+function addScrollRevealEffects() {
+  const revealElements = document.querySelectorAll('.card, .count-number, h2, .blur-background');
+  
+  function checkReveal() {
+    revealElements.forEach(el => {
+      if (isElementInViewport(el) && !el.classList.contains('revealed')) {
+        el.classList.add('revealed');
+        el.style.transition = "opacity 0.5s ease, transform 0.7s ease";
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      }
+    });
+  }
+  
+  // Initial setup
+  revealElements.forEach(el => {
+    if (!el.classList.contains('arrow-animate') && !el.classList.contains('count-number')) {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+    }
+  });
+  
+  window.addEventListener('scroll', checkReveal);
+  window.addEventListener('resize', checkReveal);
+  window.addEventListener('load', checkReveal);
+  
+  // Initial check
+  setTimeout(checkReveal, 300);
+}
+
+// Initialize when document loads
+document.addEventListener('DOMContentLoaded', function() {
+  animateNumbers();
+  setupArrowAnimation();
+  addScrollRevealEffects();
 });
 </script>
   
