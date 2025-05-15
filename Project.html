@@ -28,26 +28,6 @@
         background-color: #0e1313;
         color: white;
         overflow-x: hidden; /* Prevent horizontal scroll */
-        scroll-behavior: smooth;
-      }
-
-      /* Custom scrollbar styling */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: #0E1313;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background: rgba(0, 206, 209, 0.5);
-        border-radius: 4px;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(0, 206, 209, 0.8);
       }
 
       .navbar-nav {
@@ -85,16 +65,6 @@
           margin-top: 1rem;
           justify-content: flex-start !important;
         }
-
-        .left-text h1 {
-          font-size: 48px !important;
-          line-height: 60px !important;
-        }
-
-        .bg-blur-shape {
-          width: 100% !important;
-          height: 300px !important;
-        }
       }
 
       .request-call-btn {
@@ -110,13 +80,6 @@
         align-items: center;
         justify-content: center;
         color: #00ced1;
-        transition: all 0.3s ease;
-      }
-
-      .request-call-btn:hover {
-        background-color: rgba(0, 206, 209, 0.1);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
       }
 
       .text-gradient {
@@ -129,13 +92,10 @@
         background-color: #00c2b2;
         color: white;
         border: none;
-        transition: all 0.3s ease;
       }
 
       .btn-teal:hover {
         background-color: #00aa9a;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 194, 178, 0.3);
       }
 
       .custom-section {
@@ -213,19 +173,11 @@
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        max-width: 548px;
-        height: auto;
-        min-height: 448px;
-        margin: 0 auto;
-      }
-
-      .custom-project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 206, 209, 0.1);
+        width: 548px;
+        height: 448px;
       }
 
       .custom-project-content {
@@ -236,8 +188,7 @@
         font-family: "Plus Jakarta Sans", sans-serif;
         font-weight: 700;
         font-size: 20px;
-        width: 100%;
-        max-width: 242px;
+        width: 242px;
         background: linear-gradient(90deg, #baffff 0%, #779494 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -254,15 +205,13 @@
       }
 
       .custom-tag {
-        width: auto;
-        max-width: 138px;
+        width: 138px;
         height: 28px;
         color: #00d6b4;
         font-size: 0.75rem;
         padding: 4px 8px;
         border-radius: 20px;
         border: 1px solid #e0ffff;
-        white-space: nowrap;
       }
 
       .custom-project-btn {
@@ -275,10 +224,10 @@
         height: 40px;
         text-decoration: none;
         font-size: 18px;
-        transition: all 0.3s ease;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+        transition: background-color 0.3s ease;
+        margin-left: 450px;
+        position: relative;
+        bottom: 115px;
         border-radius: 32px;
         background: linear-gradient(
           164.95deg,
@@ -288,77 +237,24 @@
         );
       }
 
-      .custom-project-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 15px rgba(0, 206, 209, 0.4);
-      }
-
       /* Padding around image without changing bg color */
       .custom-project-img-wrapper {
         padding: 16px;
-        position: relative;
       }
 
       .custom-project-img {
         width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-        object-fit: cover;
+        height: 360px;
         border-radius: 10px;
         position: relative;
         bottom: 75px;
         clip-path: polygon(69% 0, 100% 0, 100% 24%, 100% 70%, 100% 100%, 50% 100%, 19% 100%, 0 100%, 0 12%, 69% 12%);
-      }
       
+      }
       .custom-project-btn i {
         font-size: 28px; /* Make icon thicker/larger */
         color: #000000; /* Black color */
         font-weight: bolder; /* Might help visually thicken the icon */
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .left-text h1 {
-          font-size: 40px;
-          line-height: 50px;
-        }
-        
-        .lead {
-          font-size: 16px;
-          line-height: 28px;
-        }
-        
-        .custom-project-card {
-          min-height: 380px;
-        }
-        
-        .custom-project-img {
-          bottom: 50px;
-        }
-        
-        .custom-project-btn {
-          bottom: 15px;
-          right: 15px;
-        }
-      }
-      
-      @media (max-width: 576px) {
-        .custom-project-card {
-          min-height: 320px;
-        }
-        
-        .custom-project-img {
-          bottom: 30px;
-        }
-        
-        .custom-tag {
-          padding: 3px 6px;
-          font-size: 0.7rem;
-        }
-        
-        .custom-project-title {
-          font-size: 18px;
-        }
       }
     </style>
   </head>
@@ -401,7 +297,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="Pricing.html">Pricing</a>
+                <a class="nav-link text-light" href="pricing.html">Pricing</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="#">Project</a>
@@ -465,9 +361,9 @@
 
     <section class="custom-projects-wrapper py-5">
     <div class="container">
-        <div class="row g-4 gx-5 gy-3">
+        <div class="row g-4   gx-5   gy-3"   >
             <!-- Card 1 -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6  d-flex  justify-content-center">
                 <div class="custom-project-card">
                     <div class="custom-project-content">
                         <h5 class="custom-project-title">Project Name</h5>
@@ -475,20 +371,20 @@
                             <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
                                 Web Development
                             </span>
-                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
                                 React
                             </span>
                         </div>
                     </div>
                     <div class="custom-project-img-wrapper">
                         <img src="project/e1.png" alt="Project Image" class="custom-project-img" />
-                        <a href="#" class="custom-project-btn"><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6  d-flex   justify-content-between">
                 <div class="custom-project-card">
                     <div class="custom-project-content">
                         <h5 class="custom-project-title">Project Name</h5>
@@ -496,20 +392,20 @@
                             <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
                                 Web Development
                             </span>
-                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
                                 React
                             </span>
                         </div>
                     </div>
                     <div class="custom-project-img-wrapper">
                         <img src="project/e2.png" alt="Project Image" class="custom-project-img" />
-                        <a href="#" class="custom-project-btn"><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6   d-flex  justify-content-between">
                 <div class="custom-project-card">
                     <div class="custom-project-content">
                         <h5 class="custom-project-title">Project Name</h5>
@@ -517,20 +413,20 @@
                             <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
                                 Web Development
                             </span>
-                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
                                 React
                             </span>
                         </div>
                     </div>
                     <div class="custom-project-img-wrapper">
                         <img src="project/e3.png" alt="Project Image" class="custom-project-img" />
-                        <a href="#" class="custom-project-btn"><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="custom-project-btn"   style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6  d-flex   justify-content-between">
                 <div class="custom-project-card">
                     <div class="custom-project-content">
                         <h5 class="custom-project-title">Project Name</h5>
@@ -538,20 +434,20 @@
                             <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
                                 Web Development
                             </span>
-                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
                                 React
                             </span>
                         </div>
                     </div>
                     <div class="custom-project-img-wrapper">
                         <img src="project/e4.png" alt="Project Image" class="custom-project-img" />
-                        <a href="#" class="custom-project-btn"><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 5 -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6  d-flex  justify-content-between">
                 <div class="custom-project-card">
                     <div class="custom-project-content">
                         <h5 class="custom-project-title">Project Name</h5>
@@ -559,20 +455,20 @@
                             <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
                                 Web Development
                             </span>
-                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
                                 React
                             </span>
                         </div>
                     </div>
                     <div class="custom-project-img-wrapper">
                         <img src="project/e5.png" alt="Project Image" class="custom-project-img" />
-                        <a href="#" class="custom-project-btn"><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Card 6 -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6  d-flex  justify-content-between">
                 <div class="custom-project-card">
                     <div class="custom-project-content">
                         <h5 class="custom-project-title">Project Name</h5>
@@ -580,14 +476,14 @@
                             <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
                                 Web Development
                             </span>
-                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
                                 React
                             </span>
                         </div>
                     </div>
                     <div class="custom-project-img-wrapper">
                         <img src="project/e6.png" alt="Project Image" class="custom-project-img" />
-                        <a href="#" class="custom-project-btn"><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -595,51 +491,84 @@
     </div>
 </section>
 <!-- Wrapper just for background image -->
-    <div class="d-flex justify-content-center mb-3" style="position: relative; top: 50px; width: 100%;">
+    <div
+      class="d-flex justify-content-center mb-3"
+      style="position: relative; top: 50px"
+    >
       <!-- Background image only inside this box -->
-      <div class="position-relative" 
-           style="border-radius: 20px; overflow: hidden; background-image: url('bg1.png'); background-size: cover; background-position: center; width: 95%; max-width: 1200px;">
-
+      <div
+        class="position-relative w-75"
+        style="
+          border-radius: 20px;
+          overflow: hidden;
+          background-image: url('bg1.png');
+          background-size: cover;
+          background-position: center;
+        "
+      >
         <!-- Optional dim overlay -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                    background-color: rgba(0, 0, 0, 0.4); z-index: 0;"></div>
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+          "
+        ></div>
 
         <!-- Content Box -->
-        <div class="row justify-content-center p-4 text-light position-relative"
-             style="z-index: 1; border-radius: 20px;
-                    background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, 
-                    rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-
+        <div
+          class="row justify-content-center p-4 text-light position-relative"
+          style="
+            z-index: 1;
+            border-radius: 20px;
+            background: linear-gradient(
+              164.95deg,
+              rgba(43, 255, 255, 0.1) 0%,
+              rgba(43, 255, 255, 0.02) 50%,
+              rgba(43, 255, 255, 0.06) 100%
+            );
+          "
+        >
           <div class="col-lg-8 col-md-10 text-center">
-            <h2 class="fw-bold" style="
-                background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+            <h2
+              class="fw-bold"
+              style="
+                background: linear-gradient(90deg, #baffff 0%, #779494 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size: clamp(1.5rem, 4vw, 2.5rem);">
+              "
+            >
               Let's Work Together On Your
             </h2>
-            <h2 class="fw-bold" style="
-                background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+            <h2
+              class="fw-bold"
+              style="
+                background: linear-gradient(90deg, #baffff 0%, #779494 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size: clamp(1.5rem, 4vw, 2.5rem);">
+              "
+            >
               Next Project
             </h2>
 
             <div class="mt-4">
-             <a href="#contact" 
-               class="btn btn-info px-4 py-2 fw-semibold" 
-               style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%) !important;
-                        box-shadow: 0px 4px 9px 0px #00CED11A, 
-                                    0px 17px 17px 0px #00CED117, 
-                                    0px 37px 22px 0px #00CED10D, 
-                                    0px 66px 26px 0px #00CED103, 
-                                    0px 103px 29px 0px #a3c7c700;
-                        color: #060505 !important;
-                        border: none !important;
-                        transition: all 0.3s ease;">
-                Contact Us
-            </a>
+            <a href="#contact" 
+   class="btn btn-info px-4 py-2 fw-semibold" 
+   style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%) !important;
+          box-shadow: 0px 4px 9px 0px #00CED11A, 
+                      0px 17px 17px 0px #00CED117, 
+                      0px 37px 22px 0px #00CED10D, 
+                      0px 66px 26px 0px #00CED103, 
+                      0px 103px 29px 0px #a3c7c700;
+          color: #060505 !important;
+          border: none !important;
+          transition: all 0.3s ease;">
+    Contact Us
+</a>
             </div>
           </div>
         </div>
@@ -647,7 +576,7 @@
     </div>
 
 
-<section class="footer-custom-bg text-light mt-sm-5" style="position: relative; top: 60px; padding-bottom: 20px;">
+<section class="footer-custom-bg text-light mt-sm-5" style="position: relative;   top: 60px;">
         <div class="container">
           <div class="row">
             <!-- Column 1 -->
@@ -656,69 +585,89 @@
                 class="d-flex justify-content-between align-items-start flex-column flex-lg-row"
               >
                 <div>
-                  <a class="navbar-brand d-flex align-items-center mt-sm-1" href="#">
+                  <a class="navbar-brand d-flex align-items-center  mt-sm-1" href="#">
                     <img
                       src="code prime.png"
                       alt="Code Prime Logo"
                       height="48px"
                       width="161px"
-                      class="img-fluid"
-                      style="max-width: 161px;"
                     />
                   </a>
-                  <div class="d-flex gap-2 mt-3" style="margin-left: 18px;">
+                  <div class="d-flex gap-2 mt-3" style="margin-left: 18px; ">
                             <a href="#" class="social-icon">
-                                <img src="footer/facebook.png" alt="fb" style="width: 32.99px; height: 32.42px;" class="img-fluid">
+                                <img src="footer/facebook.png" alt="fb" style="width: 32.99px; height: 32.42pxpx;">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="footer/Instagram (1).png" alt="Instagram" style="width: 32.99px; height: 32.42px;" class="img-fluid">
+                                <img src="footer/Instagram (1).png" alt="Instagram" style="width: 32.99px; height: 32.42pxpx;">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="footer/Twitter (1).png" alt="X (Twitter)" style="width: 32.99px; height: 32.42px;" class="img-fluid">
+                                <img src="footer/Twitter (1).png" alt="X (Twitter)" style="width: 32.99px; height: 32.42pxpx;">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="footer/Linkedin.png" alt="LinkedIn" style="width: 32.99px; height: 32.42px;" class="img-fluid">
+                                <img src="footer/Linkedin.png" alt="LinkedIn"style="width: 32.99px; height: 32.42pxpx;">
                             </a>
                         </div>
                 </div>
-                <div class="mt-3 mt-lg-0 ms-lg-5 px-4 d-none d-lg-block">
+                <div class="mt-3 mt-lg-0 ms-lg-5 px-4">
                   <div class="d-flex flex-column mt-sm-3 ps-5">
-                    <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Services</a>
-                    <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Teams</a>
-                    <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Teams</a>
+                    <a href="#" class=" text-decoration-none mb-2"  style="color:  #E0FFFF;
+;"
+                      >Services</a
+                    >
+                    <a href="#" class=" text-decoration-none mb-2"  style="color:  #E0FFFF";
+                      >Teams</a
+                    >
+                    <a href="#" class=" text-decoration-none mb-2" style="color:  #E0FFFF";
+                      >Teams</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Column 2 -->
-            <div class="col-6 col-md-4 col-lg-3 mb-4 text-lg-start ps-lg-5">
-              <div class="d-flex flex-column mt-sm-3 ps-lg-5">
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">About Us</a>
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Projects</a>
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Projects</a>
+            <div class="col-12 col-md-6 col-lg-3 mb-4 text-lg-start px-5">
+              <div class="d-flex flex-column ms-lg-5 mt-sm-3 ps-5">
+                <a href="#" class=" text-decoration-none mb-2"   style="color:  #E0FFFF";
+                  >About Us</a
+                >
+                <a href="#" class=" text-decoration-none mb-2"     style="color:  #E0FFFF";
+                  >Projects</a
+                >
+                <a href="#" class=" text-decoration-none mb-2"     style="color:  #E0FFFF";
+                  >Projects</a
+                >
               </div>
             </div>
 
             <!-- Column 3 -->
-            <div class="col-6 col-md-4 col-lg-3 mb-4">
-              <div class="d-flex flex-column mt-sm-3">
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Pricing</a>
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Blogs</a>
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">Blogs</a>
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+              <div class="d-flex flex-column ms-2 mt-sm-3">
+                <a href="#" class=" text-decoration-none mb-2"      style="color:  #E0FFFF";
+                  >Pricing</a
+                >
+                <a href="#" class=" text-decoration-none mb-2"       style="color:  #E0FFFF";
+                  >Blogs</a
+                >
+                <a href="#" class=" text-decoration-none mb-2"       style="color:  #E0FFFF";
+                  >Blogs</a
+                >
               </div>
             </div>
 
             <!-- Column 4 -->
-            <div class="col-12 col-md-4 col-lg-3 mb-4">
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
               <div class="d-flex flex-column mt-sm-3">
-                <a href="#" class="text-decoration-none mb-2" style="white-space: normal; color: #E0FFFF;">
-                  <i class="bi bi-geo-alt-fill me-2" style="font-size: 1.2rem;"></i>Bahria Town, Islamabad, Pakistan
+                <a href="#" class=" text-decoration-none mb-2"  style="white-space: nowrap;color:  #E0FFFF
+">
+                  <i class="bi bi-geo-alt-fill me-2" style="font-size: 1.2rem; 
+ "></i>Bahria Town, Islamabad,
+                  Pakistan
                 </a>
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">
+                <a href="#" class=" text-decoration-none mb-2" style="color:  #E0FFFF">
                   <i class="bi bi-telephone-fill me-2" style="font-size: 1.2rem;"></i>+1 (786) 348-7052
                 </a>
-                <a href="#" class="text-decoration-none mb-2" style="color: #E0FFFF;">
+                <a href="#" class=" text-decoration-none mb-2"   style="color:  #E0FFFF">
                   <i class="bi bi-envelope-fill me-2" style="font-size: 1.2rem;"></i>info@primecode.ai
                 </a>
               </div>
@@ -732,46 +681,9 @@
         </div>
       </section>
 
-<!-- Add responsive animation script for project cards -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth reveal effects
-    function isElementInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-    
-    const projectCards = document.querySelectorAll('.custom-project-card');
-    
-    function checkVisibility() {
-      projectCards.forEach(card => {
-        if (isElementInViewport(card) && !card.classList.contains('revealed')) {
-          card.classList.add('revealed');
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }
-      });
-    }
-    
-    // Initial setup
-    projectCards.forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.5s ease, transform 0.7s ease';
-    });
-    
-    window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('resize', checkVisibility);
-    
-    // Initial check
-    setTimeout(checkVisibility, 300);
-  });
-</script>
+
+
+
 
   </body>
 </html>
