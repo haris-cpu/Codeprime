@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="lgo.png" />
+    <style>
+      body {
+        background-color: #0e1313;
+        color: white;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1px;
+      }
+
+      .navbar-nav li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        box-sizing: border-box;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+        }
+
+        .navbar-nav li {
+          width: 100% !important;
+          margin-bottom: 10px;
+        }
+
+        .navbar-nav.ms-auto {
+          margin-top: 1rem;
+          justify-content: flex-start !important;
+        }
+      }
+
+      .request-call-btn {
+        width: 150px;
+        height: 40px;
+        gap: 10px;
+        border-radius: 10px;
+        padding: 10px 12px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #00ced1; /* Optional: set a border color */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #00ced1;
+      }
+
+      .text-gradient {
+        background: linear-gradient(90deg, #a8f8ff, #80f2da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .btn-teal {
+        background-color: #00c2b2;
+        color: white;
+        border: none;
+      }
+
+      .btn-teal:hover {
+        background-color: #00aa9a;
+      }
+
+      .custom-section {
+        padding: 60px 20px;
+      }
+
+      .left-text h1 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 90px;
+        letter-spacing: -0.02em;
+      }
+
+      .lead {
+        font-family: "Plus Jakarta Sans";
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 33px;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        opacity: 0.8;
+        color: #e0ffff;
+      }
+      .custom-gradient {
+        background: linear-gradient(90deg, #00ced1 0%, #20b2aa 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+        text-decoration: none;
+      }
+
+      .custom-gradient:hover {
+        opacity: 0.9;
+      }
+
+      .bg-blur-shape {
+        width: 608px;
+        height: 372px;
+        background: #00ced1;
+        opacity: 0.1;
+        border-radius: 269px;
+        filter: blur(200px);
+        z-index: 0;
+      }
+
+      .nav-btn:hover {
+        background-color: transparent;
+        color: #00ced1;
+      }
+
+      .btn-gradient {
+        width: 210px;
+        background: linear-gradient(90deg, #00ced1 0%, #20b2aa 100%);
+        height: 48px;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: #0e1313;
+      }
+
+      .custom-projects-wrapper {
+        padding: 16px;
+        position: relative;
+      }
+
+      .custom-project-card {
+        background: linear-gradient(
+          164.95deg,
+          rgba(43, 255, 255, 0.1) 0%,
+          rgba(43, 255, 255, 0.02) 50%,
+          rgba(43, 255, 255, 0.06) 100%
+        );
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        width: 548px;
+        height: 448px;
+      }
+
+      .custom-project-content {
+        padding: 16px;
+      }
+
+      .custom-project-title {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        width: 242px;
+        background: linear-gradient(90deg, #baffff 0%, #779494 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 12px;
+      }
+
+      .custom-project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 12px 10px 12px;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .custom-tag {
+        width: 138px;
+        height: 28px;
+        color: #00d6b4;
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        border-radius: 20px;
+        border: 1px solid #e0ffff;
+      }
+
+      .custom-project-btn {
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 57px;
+        height: 40px;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        margin-left: 450px;
+        position: relative;
+        bottom: 115px;
+        border-radius: 32px;
+        background: linear-gradient(
+          164.95deg,
+          rgba(43, 255, 255, 0.8) 0%,
+          rgba(43, 255, 255, 0.59) 50%,
+          rgba(43, 255, 255, 0.8) 100%
+        );
+      }
+
+      /* Padding around image without changing bg color */
+      .custom-project-img-wrapper {
+        padding: 16px;
+      }
+
+      .custom-project-img {
+        width: 100%;
+        height: 360px;
+        border-radius: 10px;
+        position: relative;
+        bottom: 75px;
+        clip-path: polygon(69% 0, 100% 0, 100% 24%, 100% 70%, 100% 100%, 50% 100%, 19% 100%, 0 100%, 0 12%, 69% 12%);
+      
+      }
+      .custom-project-btn i {
+        font-size: 28px; /* Make icon thicker/larger */
+        color: #000000; /* Black color */
+        font-weight: bolder; /* Might help visually thicken the icon */
+      }
+    </style>
+  </head>
+  <body class="text-white container">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="code prime.png"
+            alt="Code Prime Logo"
+            height="48px"
+            width="171px"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div
+            class="d-lg-flex justify-content-between align-items-center w-100"
+          >
+            <!-- Centered Menu Items -->
+            <ul class="navbar-nav mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link text-light" href="Services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light text-nowrap" href="About.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Project</a>
+              </li>
+            </ul>
+
+            <!-- Right-side Icons and Button -->
+            <ul class="navbar-nav ms-auto align-items-center">
+              <!-- Search icon with right margin -->
+              <li class="nav-item d-flex align-items-center me-3 me-sm-4">
+                <i class="bi bi-search text-secondary fs-5"></i>
+              </li>
+
+              <!-- Button with right margin -->
+              <li class="nav-item me-3 me-sm-4">
+                <a
+                  class="btn nav-btn text-nowrap request-call-btn"
+                  href="Contact.html"
+                >
+                  Request a Call
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="custom-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side -->
+          <div
+            class="col-lg-6 left-text mb-4 mb-lg-0 text-lg-start text-center position-relative"
+          >
+            <div
+              class="bg-blur-shape position-absolute top-50 start-50 translate-middle"
+            ></div>
+            <small class="text-uppercase d-block mb-2">Home/Projects</small>
+            <h1 class="display-4 fw-bold mt-2 mb-0 text-gradient text-break">
+              Ideas to excellence.
+            </h1>
+          </div>
+
+          <!-- Right Side -->
+          <div class="col-lg-6 right-text">
+            <p class="lead ms-lg-3 text-center text-lg-start">
+              Engineering High-Performance Digital Experiences.<br />
+              Creating Smart, Seamless Solutions.<br />
+              Delivering Excellence In Every Project.
+            </p>
+            <button
+              class="btn btn-teal btn-gradient px-4 py-2 mt-3 shadow ms-lg-3"
+            >
+              Schedule a Meeting
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-projects-wrapper py-5">
+    <div class="container">
+        <div class="row g-4   gx-5   gy-3"   >
+            <!-- Card 1 -->
+            <div class="col-md-6  d-flex  justify-content-center">
+                <div class="custom-project-card">
+                    <div class="custom-project-content">
+                        <h5 class="custom-project-title">Project Name</h5>
+                        <div class="custom-project-tags mb-2">
+                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                                Web Development
+                            </span>
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
+                                React
+                            </span>
+                        </div>
+                    </div>
+                    <div class="custom-project-img-wrapper">
+                        <img src="project/e1.png" alt="Project Image" class="custom-project-img" />
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6  d-flex   justify-content-between">
+                <div class="custom-project-card">
+                    <div class="custom-project-content">
+                        <h5 class="custom-project-title">Project Name</h5>
+                        <div class="custom-project-tags mb-2">
+                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                                Web Development
+                            </span>
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
+                                React
+                            </span>
+                        </div>
+                    </div>
+                    <div class="custom-project-img-wrapper">
+                        <img src="project/e2.png" alt="Project Image" class="custom-project-img" />
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6   d-flex  justify-content-between">
+                <div class="custom-project-card">
+                    <div class="custom-project-content">
+                        <h5 class="custom-project-title">Project Name</h5>
+                        <div class="custom-project-tags mb-2">
+                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                                Web Development
+                            </span>
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
+                                React
+                            </span>
+                        </div>
+                    </div>
+                    <div class="custom-project-img-wrapper">
+                        <img src="project/e3.png" alt="Project Image" class="custom-project-img" />
+                        <a href="#" class="custom-project-btn"   style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6  d-flex   justify-content-between">
+                <div class="custom-project-card">
+                    <div class="custom-project-content">
+                        <h5 class="custom-project-title">Project Name</h5>
+                        <div class="custom-project-tags mb-2">
+                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                                Web Development
+                            </span>
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
+                                React
+                            </span>
+                        </div>
+                    </div>
+                    <div class="custom-project-img-wrapper">
+                        <img src="project/e4.png" alt="Project Image" class="custom-project-img" />
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6  d-flex  justify-content-between">
+                <div class="custom-project-card">
+                    <div class="custom-project-content">
+                        <h5 class="custom-project-title">Project Name</h5>
+                        <div class="custom-project-tags mb-2">
+                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                                Web Development
+                            </span>
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
+                                React
+                            </span>
+                        </div>
+                    </div>
+                    <div class="custom-project-img-wrapper">
+                        <img src="project/e5.png" alt="Project Image" class="custom-project-img" />
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6  d-flex  justify-content-between">
+                <div class="custom-project-card">
+                    <div class="custom-project-content">
+                        <h5 class="custom-project-title">Project Name</h5>
+                        <div class="custom-project-tags mb-2">
+                            <span class="custom-tag" style="font-weight: 700; font-size: 12px; color: #e0ffff">
+                                Web Development
+                            </span>
+                            <span class="custom-tag" style="width: 74px; font-weight: 700; font-size: 12px; color: #e0ffff">
+                                React
+                            </span>
+                        </div>
+                    </div>
+                    <div class="custom-project-img-wrapper">
+                        <img src="project/e6.png" alt="Project Image" class="custom-project-img" />
+                        <a href="#" class="custom-project-btn"  style="margin-left: 410px;"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  </body>
+</html>
