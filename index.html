@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" href="lgo.png">
   <style>
@@ -37,8 +38,7 @@
     }
     
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(43, 255, 255, 0.1);
+  /* Hover effect removed */
     }
 
     /* Refined gradient text */
@@ -56,12 +56,18 @@
       right: 50%;
       margin-left: -50vw;
       margin-right: -50vw;
+  overflow: hidden;
     }
 
+
+
     .full-width-image img {
-      width: 100%;
-      height: auto;
+  width: 1440px;
+  height: 405px;
       display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
     }
 
 
@@ -192,10 +198,671 @@
 }
 
 /* Removed duplicate arrow-animate styles */
-      
+      /* Apply outer figma constraints */
+.hero-wrapper {
+  width: 1440px;
+  height: 837px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 101px;
+  position: relative;
+  background: url('before.png') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+
+
+/* Foreground content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  width: 207px;
+  height: 20px;
+  color:  #F9FFFF;
+
+  white-space: nowrap;
+  
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.7rem;
+  padding-left: 3rem;
+}
+
+.hero-heading {
+  color: #baffff;
+  font-weight: 700;
+  font-size: 72px;
+  height: 108px;
+  width: 606px;
+  text-shadow: 0 0 20px rgba(186, 255, 255, 0.3);
+  position: relative;
+  bottom: 25px;
+  padding-left: 3rem;
+  vertical-align: middle;
+
+}
+
+/* Hero text box */
+.hero-text-box {
+  width: 497px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* Right column paragraph */
+.hero-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  width: 497px;
+  height: 99px;
+  opacity: 80%;
+  letter-spacing: 0.3px;
+  color: #E0FFFF;
+  position: relative;
+  left: 40px;
+  padding-top: 1rem;
+  text-transform: capitalize;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+/* CTA Button */
+.hero-button {
+  width: 206px;
+  height: 48px;
+  padding: 10px 12px;
+  gap: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%);
+  box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2);
+  color: #000000;
+  font-weight: 600;
+  position: relative;
+  left: 40px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Snake image */
+.full-width-image img {
+  width: 1440px;
+  height: 405px;
+  position: relative;
+  z-index: 0;
+}
+
+/* Main container */
+main.container {
+  width: 1120px;
+  height: 450px;
+  position: relative;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card styles */
+.card-gradient-primary {
+  background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.12) 0%, rgba(43, 255, 255, 0.03) 50%, rgba(43, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(10px);
+  width: 257px !important;
+  height: 400px !important;
+}
+
+.card-gradient-secondary {
+  background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);
+  background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);
+}
+
+/* Individual card dimensions */
+.col-md-6.col-lg-3 .card {
+  width: 257px !important;
+  height: 400px !important;
+  margin: 0 auto;
+  min-height: 400px;
+  max-height: 400px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Card heading styles */
+.card h3.h4 {
+  width: 177px;
+  height: 49px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon, .card-icon-small {
+  width: 86px;
+  height: 86px;
+  object-fit: contain;
+}
+
+.mb-4.d-flex.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-title-gradient {
+  background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Card text light */
+.card-text-light {
+  width: 214px !important;
+  height: 130px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: #E0FFFF;
+  background: transparent;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Make sure grid spacing is appropriate */
+.row.g-4 {
+  justify-content: center;
+}
+
+/* Milestone section styles */
+.milestone-section-spacing {
+  margin-top: 90px;
+}
+
+.milestone-title {
+  font-weight: 600;
+}
+
+.milestone-stats-container {
+  background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(43, 255, 255, 0.1);
+  width: 673px;
+  height: 165px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 32px;
+  padding: 40px;
+}
+
+.milestone-stat-heading {
+  background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.milestone-divider {
+  width: 0.5px;
+  background-color: #00CED1;
+  opacity: 0.6;
+}
+
+.milestone-image {
+  filter: drop-shadow(0 10px 20px rgba(0, 206, 209, 0.15));
+  width: 495px;
+  height: 342px;
+  position: relative;
+  left: 60px;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+/* Approach section styles */
+.approach-section {
+  margin-top: 90px;
+}
+
+.gradient-heading {
+  background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.animated-image {
+  max-width: 80px;
+}
+
+.arrow-container {
+  position: relative;
+}
+
+.arrow-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: #BAFFFF;
+}
+
+/* Arrow element */
+.arrow-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: #BAFFFF;
+}
+
+/* Pricing section styles */
+.pricing-section {
+  padding: 4rem 0;
+  overflow: visible;
+  margin-bottom: 3rem;
+}
+
+.pricing-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  width: 259px;
+  height: 120px;
+  background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.pricing-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  width: 300px;
+  height: 78px;
+  color: #E0FFFF;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-btn {
+  padding: 0.5rem;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.pricing-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pricing-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.pricing-card {
+  width: 316px;
+  height: 420px; /* Increased height to accommodate larger price */
+  border-radius: 32px;
+  padding: 40px;
+  background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 206, 209, 0.1);
+}
+
+.pricing-card:hover {
+  /* Hover effect removed */
+}
+
+.pricing-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+.pricing-card-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-card-icon-large {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.pricing-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.pricing-card-text {
+  color: #E0FFFF;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  width: 251px;
+  height: 120px;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-card-tech {
+  max-width: 230px;
+  margin: 0.5rem auto;
+}
+
+.pricing-card-price {
+  color: #1CB5AF;
+  margin-top: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  height: 56px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.pricing-card-price small {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Responsive styling for pricing cards */
+@media (max-width: 1200px) {
+  .pricing-card-container {
+    padding-bottom: 1rem;
+  }
+  
+  .pricing-card {
+    width: 316px;
+    height: 383px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pricing-section {
+    padding: 2rem 0;
+  }
+  
+  .pricing-card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pricing-card {
+    width: 316px;
+    height: 383px;
+    margin: 0 auto 2rem;
+  }
+  
+  .pricing-card-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    width: 316px;
+    height: 383px;
+    margin: 0 auto 2rem;
+  }
+}
+
+.pricing-card-image-grid {
+  display: flex;
+  width: 232px;
+  height: 40px;
+  gap: 8px;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-card-image-grid img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cta-section {
+  width: 1212px;
+  height: 342px;
+  padding: 0;
+  gap: 40px;
+  border-radius: 32px;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.cta-container {
+  border-radius: 32px;
+  overflow: hidden;
+  background-image: url('bg1.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 206, 209, 0.2));
+  z-index: 0;
+}
+
+.cta-content {
+  z-index: 1;
+  border-radius: 20px;
+  background: transparent;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.cta-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%);
+  box-shadow: 0px 4px 15px rgba(0, 206, 209, 0.3);
+  color: #0a0a0a;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.body-background {
+  background-color: #0E1313;
+}
+
+.logo-shadow {
+  filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));
+}
+
+.navbar-toggle-border {
+  border-color: rgba(0, 206, 209, 0.5);
+}
+
+.nav-link-style {
+  font-weight: 500;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.section-heading-teal {
+  color: #baffff;
+}
+
+.footer-background {
+  position: relative;
+  top: 60px;
+  padding-top: 30px;
+  background: linear-gradient(to top, #0a0a0a, #0E1313);
+}
+
+.social-icon-container {
+  margin-left: 18px;
+}
+
+.social-icon-image {
+  width: 32.99px;
+  height: 32.42px;
+  filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));
+}
+
+.footer-link {
+  color: #E0FFFF;
+}
+
+.footer-location {
+  white-space: nowrap;
+  color: #E0FFFF;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+}
+
+.footer-image {
+  max-width: 100%;
+}
+
+.footer-copyright {
+  color: #779494;
+  font-size: 0.9rem;
+}
+
+.footer-content-row {
+  width: 1212px;
+  height: 109.42px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-container {
+  width: 1212px;
+  height: 109.42px;
+  margin: 0 auto;
+}
+
+.logo-social-container {
+  width: 174.02px;
+  height: 109.42px;
+  position: relative;
+}
+
   </style>
 </head>
-<body class=" text-white    container"    style="background-color: #0E1313;">
+<body class="text-white body-background">
 
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
       <div class="container">
@@ -205,16 +872,15 @@
             alt="Code Prime Logo"
             height="48px"
             width="171px"
-            style="filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));"
+            class="logo-shadow"
           />
         </a>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler navbar-toggle-border"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          style="border-color: rgba(0, 206, 209, 0.5);"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -226,19 +892,19 @@
             <!-- Centered Menu Items -->
             <ul class="navbar-nav mx-auto text-center">
               <li class="nav-item">
-               <a class="nav-link text-light" href="Services.html" style="font-weight: 500; transition: color 0.3s ease;">Services</a>
+               <a class="nav-link text-light nav-link-style" href="Services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="blog.html" style="font-weight: 500; transition: color 0.3s ease;">Blog</a>
+                <a class="nav-link text-light nav-link-style" href="blog.html">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light text-nowrap" href="About.html" style="font-weight: 500; transition: color 0.3s ease;">About Us</a>
+                <a class="nav-link text-light text-nowrap nav-link-style" href="About.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="Pricing.html" style="font-weight: 500; transition: color 0.3s ease;">Pricing</a>
+                <a class="nav-link text-light nav-link-style" href="Pricing.html">Pricing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="Project.html" style="font-weight: 500; transition: color 0.3s ease;">Project</a>
+                <a class="nav-link text-light nav-link-style" href="Project.html">Project</a>
               </li>
             </ul>
 
@@ -246,12 +912,12 @@
             <ul class="navbar-nav ms-auto align-items-center">
               <!-- Search icon with right margin -->
               <li class="nav-item d-flex align-items-center me-3 me-sm-4">
-                <i class="bi bi-search text-secondary fs-5" style="cursor: pointer; transition: color 0.3s ease;"></i>
+                <i class="bi bi-search text-secondary fs-5 cursor-pointer"></i>
               </li>
 
               <!-- Button with right margin -->
              <li class="nav-item me-3 me-sm-4">
-                <a class="btn nav-btn request-call-btn text-nowrap" href="#" style="transition: all 0.3s ease;">Request a Call</a>
+                <a class="btn nav-btn request-call-btn text-nowrap" href="#">Request a Call</a>
               </li>
             </ul>
           </div>
@@ -262,53 +928,46 @@
 
 
 
-<section class="container-fluid py-5 text-center text-lg-start">
-    <div class="row align-items-center">
-      <div class="col-lg-6 px-4 position-relative">
-        <!-- Very blur green background -->
-        <div class="blur-background" 
-             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-                    background: #519192; filter: blur(100px); z-index: 0; opacity: 0.8;"></div>
-  
-        <!-- Content above blur -->
-        <div style="position: relative; z-index: 1;">
-          <p class="small ms-lg-5 pb-4 mx-2 mx-lg-0" 
-             style="color: #cccccc; max-width: 90%; letter-spacing: 1px; text-transform: uppercase; font-weight: 500;">Web Development Solution</p>
-         <h1 class="display-5 ms-lg-5 hero-heading" 
-             style="color: #baffff; font-weight: 700; font-size: 72px; 
-                    width: 606px; position: relative; bottom: 25px; text-shadow: 0 0 20px rgba(186, 255, 255, 0.3);">
-            Prime Code For<br>Prime Solutions
-         </h1>
-        </div>
-      </div>
-  
-      <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0 px-4">
-        <div class="ms-lg-5">
-          <p class="pt-4 text-light text-center text-lg-start responsive-paragraph" 
-             style="font-weight: 400; font-size: 20px; line-height: 33px; 
-                    width: 497px; height: 99px; opacity: 0.9; letter-spacing: 0.3px;">
-            Engineering High-Performance Digital Experiences. Creating Smart, Seamless Solutions. Delivering Excellence In Every Project.
-          </p>
-          <a href="#" class="btn custom-gradient text-dark fw-semibold px-4 py-3 mt-sm-5 responsive-btn" 
-             style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%); border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2);">
-            Schedule a Meeting
-          </a>
-        </div>
+<section class="hero-wrapper container py-5 text-center text-lg-start">
+  <div class="row align-items-center">
+    <div class="col-lg-6 px-4 position-relative">
+      
+
+      <div class="hero-content">
+        <p class="hero-subtitle">
+          Web Development Solution
+        </p>
+        <h1 class="hero-heading">
+          Prime Code For<br>Prime Solutions
+        </h1>
       </div>
     </div>
-</section>
-  
 
-  <!-- Snake Background Image -->
-  <div class="full-width-image">
-    <img src="i1.png" alt="Wave Background">
+    <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0 px-4">
+      <div class="hero-text-box ms-lg-5">
+        <p class="hero-description">
+          Engineering High-Performance Digital Experiences. Creating Smart, Seamless Solutions. Delivering Excellence In Every Project.
+        </p>
+        <a href="#" class="btn hero-button">
+          Schedule a Meeting
+        </a>
+      </div>
+    </div>
   </div>
+
+  <div class="full-width-image mt-5"   >
+  <img src="i1.png" alt="Wave Background" class="snake-image" />
+</div>
+</section>
+
+
+
 
 
 
   <section class="py-5 text-center">
     <div class="container">
-      <h6 class="h4 fw-bold mb-4" style="color: #baffff;">Unlocking the Solution. We Hold the Key Pieces</h6>
+      <h6 class="h4 fw-bold mb-4 section-heading-teal">Unlocking the Solution. We Hold the Key Pieces</h6>
     </div>
   </section>
   
@@ -317,72 +976,57 @@
     <div class="row g-4">
       <!-- Team Spirit -->
       <div class="col-md-6 col-lg-3">
-        <div class="card border-0 rounded-4 h-100 shadow-sm" style="background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.12) 0%, rgba(43, 255, 255, 0.03) 50%, rgba(43, 255, 255, 0.08) 100%); backdrop-filter: blur(10px);">
+        <div class="card border-0 rounded-5 h-100 shadow-sm card-gradient-primary">
           <div class="card-body p-4 py-5 text-center">
             <div class="mb-4 d-flex justify-content-center">
-              <img src="i2.png" alt="Team Spirit" class="img-fluid" style="width: 70px; filter: drop-shadow(0 4px 6px rgba(0, 206, 209, 0.2));">
+              <img src="i2.png" alt="Team Spirit" class="img-fluid card-icon">
             </div>
-            <h3 class="h4 mb-3">
-              <span class="gradient-text">The Team Spirit</span>
+            <h3 class="h4">
+              <span class="card-title-gradient">The Team Spirit</span>
             </h3>
-            <p style="color: #e0ffff; line-height: 1.6;">Our Professional Individuals Collaborate With And Drive Each Other To Achieve Big, Working In Perfect Syncronicity.</p>
+            <p class="card-text-light">Our Professional Individuals Collaborate With And Drive Each Other To Achieve Big, Working In Perfect Syncronicity.</p>
           </div>
         </div>
       </div>
 
       <!-- Flexible Workforce -->
       <div class="col-md-6 col-lg-3">
-        <div class="card border-0 rounded-5 h-100 shadow-sm mt-lg-5" style="background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);">
+        <div class="card border-0 rounded-5 h-100 shadow-sm card-gradient-secondary mt-lg-5">
           <div class="card-body p-4 py-5 text-center">
-            <img src="i3.png" alt="Team Spirit" class="img-fluid w-25 mb-3">
+            <img src="i3.png" alt="Team Spirit" class="img-fluid card-icon-small">
             <h3 class="h4">
-                <span style="background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-                             -webkit-background-clip: text;
-                             -webkit-text-fill-color: transparent;
-                             display: inline-block;">
-                  The Flexible Force
-                </span>
+<span class="card-title-gradient">The Flexible Force</span>
               </h3>
               
-            <p style="color: #e0ffff;">You Can Take Advantage Of Each Staff Member's Innumerable Skillsets...</p>
+            <p class="card-text-light">You can take advantage of each staff member's innumerable skillsets, saving you the trouble of extra hires.</p>
           </div>
         </div>
       </div>
 
       <!-- Timeless Service -->
       <div class="col-md-6 col-lg-3">
-        <div class="card border-0 rounded-5 h-100 shadow-sm" style="background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);">
+        <div class="card border-0 rounded-5 h-100 shadow-sm card-gradient-secondary">
           <div class="card-body p-4 py-5 text-center">
-            <img src="i4.png" alt="Team Spirit" class="img-fluid w-25 mb-3">
+            <img src="i4.png" alt="Team Spirit" class="img-fluid card-icon-small">
             <h3 class="h4">
-                <span style="background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-                             -webkit-background-clip: text;
-                             -webkit-text-fill-color: transparent;
-                             display: inline-block;">
-                  The Time Services
-                </span>
+<span class="card-title-gradient">The Time Services</span>
               </h3>
               
-            <p style="color: #e0ffff;">With A US Timezone-Friendly Work Style, We Strive To Not Let Long Distances Disrupt The Tasks At Hand.</p>
+            <p class="card-text-light">With A US Timezone-Friendly Work Style, We Strive To Not Let Long Distances Disrupt The Tasks At Hand.</p>
           </div>
         </div>
       </div>
 
       <!-- Client First -->
       <div class="col-md-6 col-lg-3">
-        <div class="card border-0 rounded-5 h-100 shadow-sm mt-lg-5 " style="background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%);">
+        <div class="card border-0 rounded-5 h-100 shadow-sm card-gradient-secondary mt-lg-5">
           <div class="card-body p-4 py-5 text-center">
-            <img src="i5.png" alt="Team Spirit" class="img-fluid w-25 mb-3">
+            <img src="i5.png" alt="Team Spirit" class="img-fluid card-icon-small">
             <h3 class="h4">
-                <span style="background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-                             -webkit-background-clip: text;
-                             -webkit-text-fill-color: transparent;
-                             display: inline-block;">
-                 Client First
-                </span>
+<span class="card-title-gradient">Client First</span>
               </h3>
               
-            <p   style="color: #e0ffff;">With a US timezone-friendly work style, we strive to not let long distances disrupt the tasks at hand.</p>
+            <p class="card-text-light">With a US timezone-friendly work style, we strive to not let long distances disrupt the tasks at hand.</p>
           </div>
         </div>
       </div>
@@ -397,40 +1041,38 @@
 
 
 
-<section class="text-white mt-8 pt-5 pb-5" style="margin-top: 90px;" id="milestone-section">
+<section class="text-white mt-8 pt-5 pb-5 milestone-section-spacing" id="milestone-section">
   <div class="container">
     <div class="row align-items-center">
       <!-- Left side content -->
       <div class="col-lg-6 text-start ps-5">
-        <h2 class="text-start mb-4 gradient-text" style="font-weight: 600;">Progress & Milestone</h2>
+        <h2 class="text-start mb-4 gradient-text milestone-title">Progress & Milestone</h2>
 
         <!-- Stats container with gradient -->
-        <div class="p-4 bg-dark text-center rounded-4 shadow" 
-             style="background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.15) 0%, rgba(43, 255, 255, 0.04) 50%, rgba(43, 255, 255, 0.09) 100%); 
-                    backdrop-filter: blur(10px); border: 1px solid rgba(43, 255, 255, 0.1);">
+        <div class="text-center shadow milestone-stats-container">
           
           <div class="row text-center position-relative">
             <!-- First Stat -->
             <div class="col position-relative">
-              <h3 class="display-4 fw-semibold" style="background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+              <h3 class="display-4 fw-semibold milestone-stat-heading">
                 <span class="count-number" data-target="22">0</span>+
               </h3>
               <p>Years of Experience</p>
-              <div class="position-absolute top-0 end-0 h-100" style="width:0.5px; background-color:#00CED1; opacity: 0.6;"></div>
+              <div class="position-absolute top-0 end-0 h-100 milestone-divider"></div>
             </div>
 
             <!-- Second Stat -->
             <div class="col position-relative">
-              <h3 class="display-4 fw-semibold" style="background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+              <h3 class="display-4 fw-semibold milestone-stat-heading">
                 <span class="count-number" data-target="1000">0</span>+
               </h3>
               <p>Satisfied Customer</p>
-              <div class="position-absolute top-0 end-0 h-100" style="width:0.5px; background-color:#00CED1; opacity: 0.6;"></div>
+              <div class="position-absolute top-0 end-0 h-100 milestone-divider"></div>
             </div>
 
             <!-- Third Stat -->
             <div class="col">
-              <h3 class="display-4 fw-semibold" style="background: linear-gradient(90deg, #BAFFFF 0%, #51A5A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+              <h3 class="display-4 fw-semibold milestone-stat-heading">
                 <span class="count-number" data-target="100">0</span>+
               </h3>
               <p>Brilliant Projects</p>
@@ -441,7 +1083,7 @@
 
       <!-- Right side image   haris-->
       <div class="col-lg-6 text-center">
-        <img src="kl.png" alt="Progress Image" class="img-fluid w-90" style="filter: drop-shadow(0 10px 20px rgba(0, 206, 209, 0.15));">
+        <img src="kl.png" alt="Progress Image" class="img-fluid w-90 milestone-image">
       </div>
     </div>
   </div>
@@ -453,28 +1095,16 @@
 
 
 
-<section class="text-white mt-4 pt-5 pb-5" style="margin-top: 90px;">
+<section class="text-white mt-4 pt-5 pb-5 approach-section">
   <div class="container">
       <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-              <h2 class="  mb-5"    style="
-              background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              display: inline-block;
-            ">Our no-fuss approach to staff augmentation</h2>
+              <h2 class="mb-5 gradient-heading">Our no-fuss approach to staff augmentation</h2>
 
-<div class="text-center" style="position: relative;">
-  <img src="qwe.png" alt="Illustration" id="animatedImage" class="img-fluid arrow-animate" style="max-width: 80px;">
+<div class="text-center arrow-container">
+  <img src="qwe.png" alt="Illustration" id="animatedImage" class="img-fluid arrow-animate animated-image">
 
-  <div id="arrowElement" class="arrow-animate" style="
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    color: #BAFFFF;
-  ">
+  <div id="arrowElement" class="arrow-animate arrow-element">
     ↓
   </div>
 </div>
@@ -482,18 +1112,8 @@
               
            
                   <div class=" p-5    ">
-                      <h3 class="h4 mb-4"  style="
-                      background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      display: inline-block;
-                    ">Make The First Call</h3>
-                      <p class="lead mb-0 fs-5"    style="
-                      background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      display: inline-block;
-                    ">
+                      <h3 class="h4 mb-4 gradient-heading">Make The First Call</h3>
+                      <p class="lead mb-0 fs-5 gradient-heading">
                           Leave Out No Detail About Your Business. We Will Take You Through The Team Structure,
                           Main Goals, Duration, The Plan You Can Choose, And The New Skill Set For Your Company
                       </p>
@@ -511,108 +1131,100 @@
 
 
 
-<section class=" text-white py-5">
-  <div class="container-fluid px-5 ">
-    <div class="d-flex flex-nowrap gap-5 align-items-start" style="overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;">
-      <div class="flex-shrink-0" style="min-width: 20rem;">
-        <h2  class="fs-1"  style="
-        background: linear-gradient(90deg, #BAFFFF 0%, #779494 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-      " ><strong>Explore Our <br>Pricing Plans  </strong></h2>
-        <p class="mt-2" style="color: #E0FFFF;
-;">
+<section class="text-white pricing-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mb-4">
+        <h2 class="pricing-heading">Explore Our <br>Pricing Plans</h2>
+        <p class="pricing-text">
           We Bring You A Simple Alternative To <br>Costly Hires Who Don't Always Match <br>
           Your Work Hours.
         </p>
-        <button class="btn btn-outline-info p-2 w-50  mt-4"  >View More</button>
+        <button class="btn btn-outline-info pricing-btn">View More</button>
       </div>
 
+      <div class="col-lg-9">
       <!-- Cards Wrapper -->
-      <div class="d-flex flex-nowrap gap-3 pe-4">
+        <div class="pricing-card-container">
         <!-- Card 1 -->
-        <div class="card  text-white" style="min-width: 18rem; height: 20rem; border-radius: 1.5rem;background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-          <div class="card-body text-center">
-            <!-- Image before the card title -->
-            <img src="tech1.png" alt="Icon" class="img-fluid mb-2" width="180" height="90">
-            
-            <h5 class="card-title"   style="color: #51a5a5;" >Mean / Mern</h5>
-            <p class="card-text" style="color: #E0FFFF;
-;">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
- <img src="l1.png" alt="Tech Stack" class="img-fluid my-2" width="230">
-            <h3   style="color:  #1CB5AF;
-;">$40 <small class="text-white-50">/hr</small></h3>
-          </div>
+          <div class="pricing-card">
+            <div class="pricing-card-body text-center">
+              <!-- Image grid with 4 images -->
+              <div class="pricing-card-image-grid">
+                <img src="a.png" alt="Icon A">
+                <img src="m.png" alt="Icon M">
+                <img src="js.png" alt="Icon J">
+                <img src="e.png" alt="Icon E">
+                <img src="r.png" alt="Icon R">
+              </div>
+              
+              <h5 class="pricing-card-title">Mean / Mern</h5>
+              <p class="pricing-card-text">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
+              <img src="l1.png" alt="Tech Stack" class="pricing-card-tech">
+              <h3 class="pricing-card-price">$40 <small>/hr</small></h3>
         </div>
       </div>
       
       
         <!-- Card 2 -->
-        <div class="card  text-white" style="min-width: 18rem; height: 20rem; border-radius: 1.5rem;background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-          <div class="card-body  text-center">
-            <img src="php.png" alt="Icon" class="img-fluid mb-2" width="30" height="20">
-            <h5 class="card-title"  style="color: #51a5a5;">.Net</h5>
-            <p class="card-text" style="color: #E0FFFF;
-;">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
- <img src="l1.png" alt="Tech Stack" class="img-fluid my-2" width="230">
- <h3   style="color:  #1CB5AF;
-;">$40 <small class="text-white-50">/hr</small></h3>
-           
-
+        <div class="pricing-card">
+          <div class="pricing-card-body text-center">
+            <img src="php.png" alt="Icon" class="pricing-card-icon">
+            <h5 class="pricing-card-title">.Net</h5>
+            <p class="pricing-card-text">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
+            <img src="l1.png" alt="Tech Stack" class="pricing-card-tech">
+            <h3 class="pricing-card-price">$40 <small>/hr</small></h3>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="card  text-white" style="min-width: 18rem; height: 20rem; border-radius: 1.5rem;background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-          <div class="card-body  text-center">
-            <img src="tech2.png" alt="Icon" class="img-fluid mb-2" width="180" height="90">
-            <h5 class="card-title"  style="color: #51a5a5;">PHP / Laravel</h5>
-            <p class="card-text" style="color: #E0FFFF;
-;">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.calable NoSQL</p>
- <img src="l1.png" alt="Tech Stack" class="img-fluid my-2" width="230">
- <h3   style="color:  #1CB5AF;
-;">$40 <small class="text-white-50">/hr</small></h3>
+        <div class="pricing-card">
+          <div class="pricing-card-body text-center">
+            <div class="pricing-card-image-grid">
+                <img src="a.png" alt="Icon A">
+                <img src="m.png" alt="Icon M">
+                <img src="js.png" alt="Icon J">
+                <img src="e.png" alt="Icon E">
+                <img src="r.png" alt="Icon R">
+            </div>
+            <h5 class="pricing-card-title">PHP / Laravel</h5>
+            <p class="pricing-card-text">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
+            <img src="l1.png" alt="Tech Stack" class="pricing-card-tech">
+            <h3 class="pricing-card-price">$40 <small>/hr</small></h3>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="card  text-white" style="min-width: 18rem; height: 20rem; border-radius: 1.5rem;background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-          <div class="card-body  text-center">
-            <img src="angular.png" alt="Icon" class="img-fluid mb-2" width="30" height="20">
-            <h5 class="card-title"  style="color: #51a5a5;">Angular</h5>
-            <p class="card-text" style="color: #E0FFFF;
-;">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.calable NoSQL</p>
- <img src="l1.png" alt="Tech Stack" class="img-fluid my-2" width="230">
- <h3   style="color:  #1CB5AF;
-;">$40 <small class="text-white-50">/hr</small></h3>
+        <div class="pricing-card">
+          <div class="pricing-card-body text-center">
+            <img src="angular.png" alt="Icon" class="pricing-card-icon">
+            <h5 class="pricing-card-title">Angular</h5>
+            <p class="pricing-card-text">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
+            <img src="l1.png" alt="Tech Stack" class="pricing-card-tech">
+            <h3 class="pricing-card-price">$40 <small>/hr</small></h3>
           </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="card  text-white" style="min-width: 18rem; height: 20rem; border-radius: 1.5rem;background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-          <div class="card-body  text-center">
-            <img src="React.png" alt="Icon" class="img-fluid mb-2" width="30" height="20">
-            <h5 class="card-title"  style="color: #51a5a5;">React</h5>
-            <p class="card-text" style="color: #E0FFFF;
-;">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.calable NoSQL</p>
- <img src="l1.png" alt="Tech Stack" class="img-fluid my-2" width="230">
- <h3   style="color:  #1CB5AF;
-;">$40 <small class="text-white-50">/hr</small></h3>
+        <div class="pricing-card">
+          <div class="pricing-card-body text-center">
+            <img src="React.png" alt="Icon" class="pricing-card-icon">
+            <h5 class="pricing-card-title">React</h5>
+            <p class="pricing-card-text">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
+            <img src="l1.png" alt="Tech Stack" class="pricing-card-tech">
+            <h3 class="pricing-card-price">$40 <small>/hr</small></h3>
           </div>
         </div>
 
-
           <!-- Card 6 -->
-          <div class="card  text-white" style="min-width: 18rem; height: 20rem; border-radius: 1.5rem;background: -webkit-linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%); background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-            <div class="card-body  text-center">
-              <img src="shopify.png" alt="Icon" class="img-fluid mb-2" width="30" height="20">
-              <h5 class="card-title"  style="color: #51a5a5;">Shopify</h5>
-              <p class="card-text" style="color: #E0FFFF;
-;"> The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.calable NoSQL</p>
- <img src="l1.png" alt="Tech Stack" class="img-fluid my-2" width="230">
- <h3   style="color:  #1CB5AF;
-;">$40 <small class="text-white-50">/hr</small></h3>
+        <div class="pricing-card">
+          <div class="pricing-card-body text-center">
+            <img src="shopify.png" alt="Icon" class="pricing-card-icon">
+            <h5 class="pricing-card-title">Shopify</h5>
+            <p class="pricing-card-text">The flexibility of both stacks is a smooth development process with JavaScript on both ends. We craft a modern, highly interactive and scalable NoSQL database solution.</p>
+            <img src="l1.png" alt="Tech Stack" class="pricing-card-tech">
+            <h3 class="pricing-card-price">$40 <small>/hr</small></h3>
+          </div>
             </div>
           </div>
       </div>
@@ -632,43 +1244,28 @@
 
 
 <!-- Wrapper just for background image -->
-<div class="d-flex justify-content-center mb-5" style="position: relative; top: 50px;">
-
-  <!-- Background image only inside this box -->
-  <div class="position-relative w-75" 
-       style="border-radius: 20px; overflow: hidden; background-image: url('bg1.png'); background-size: cover; background-position: center; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);">
-
-    <!-- Optional dim overlay -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 206, 209, 0.2)); z-index: 0;"></div>
+<div class="cta-section">
+  <!-- Background image container -->
+  <div class="cta-container">
+    <!-- Overlay -->
+    <div class="cta-overlay"></div>
 
     <!-- Content Box -->
-    <div class="row justify-content-center p-5 text-light position-relative"
-         style="z-index: 1; border-radius: 20px;
-                background: linear-gradient(164.95deg, rgba(43, 255, 255, 0.1) 0%, 
-                rgba(43, 255, 255, 0.02) 50%, rgba(43, 255, 255, 0.06) 100%)">
-
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100 align-items-center text-light cta-content">
       <div class="col-lg-8 col-md-10 text-center">
-        <h2 class="fw-bold mb-1 gradient-text" style="font-size: 2.5rem;">
+          <h2 class="cta-heading">
           Let's Work Together On Your
         </h2>
-        <h2 class="fw-bold mb-4 gradient-text" style="font-size: 2.5rem;">
+          <h2 class="cta-heading">
           Next Project
         </h2>
 
         <div class="mt-4">
-         <a href="#contact" 
-           class="btn px-4 py-3 fw-semibold" 
-           style="background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%) !important;
-                  box-shadow: 0px 4px 15px rgba(0, 206, 209, 0.3); 
-                  color: #0a0a0a !important;
-                  border: none !important;
-                  border-radius: 10px;
-                  font-size: 1.1rem;
-                  letter-spacing: 0.5px;
-                  transition: all 0.3s ease;">
+            <a href="#contact" class="btn cta-button">
             Contact Us
          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -678,43 +1275,36 @@
 
 
 
- <section class="footer-custom-bg text-light mt-sm-5" style="position: relative; top: 60px; padding-top: 30px; background: linear-gradient(to top, #0a0a0a, #0E1313);">
-        <div class="container">
-          <div class="row">
+ <section class="footer-custom-bg text-light mt-sm-5 footer-background">
+        <div class="container footer-container">
+          <div class="row footer-content-row">
             <!-- Column 1 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
               <div class="d-flex justify-content-between align-items-start flex-column flex-lg-row">
-                <div>
+                <div class="logo-social-container">
                   <a class="navbar-brand d-flex align-items-center mt-sm-1" href="#">
-                    <img src="code prime.png" alt="Code Prime Logo" height="48px" width="161px" style="filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));" />
+                    <img src="code prime.png" alt="Code Prime Logo" height="48px" width="161px" class="logo-shadow" />
                   </a>
-                  <div class="d-flex gap-3 mt-4" style="margin-left: 18px;">
-                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
-                      <img src="footer/facebook.png" alt="fb" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                  <div class="d-flex gap-3 mt-4 social-icon-container">
+                    <a href="#" class="social-icon">
+                      <img src="footer/facebook.png" alt="fb" class="social-icon-image">
                     </a>
-                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
-                      <img src="footer/Instagram (1).png" alt="Instagram" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    <a href="#" class="social-icon">
+                      <img src="footer/Instagram (1).png" alt="Instagram" class="social-icon-image">
                     </a>
-                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
-                      <img src="footer/Twitter (1).png" alt="X (Twitter)" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    <a href="#" class="social-icon">
+                      <img src="footer/Twitter (1).png" alt="X (Twitter)" class="social-icon-image">
                     </a>
-                    <a href="#" class="social-icon" style="transition: transform 0.3s ease;">
-                      <img src="footer/Linkedin.png" alt="LinkedIn" style="width: 32.99px; height: 32.42px; filter: drop-shadow(0 2px 4px rgba(0, 206, 209, 0.2));">
+                    <a href="#" class="social-icon">
+                      <img src="footer/Linkedin.png" alt="LinkedIn" class="social-icon-image">
                     </a>
                   </div>
                 </div>
                 <div class="mt-3 mt-lg-0 ms-lg-5 px-4">
                   <div class="d-flex flex-column mt-sm-3 ps-5">
-                    <a href="#" class=" text-decoration-none mb-2"  style="color:  #E0FFFF;
-;"
-                      >Services</a
-                    >
-                    <a href="#" class=" text-decoration-none mb-2"  style="color:  #E0FFFF";
-                      >Teams</a
-                    >
-                    <a href="#" class=" text-decoration-none mb-2" style="color:  #E0FFFF";
-                      >Teams</a
-                    >
+                    <a href="#" class="text-decoration-none mb-2 footer-link">Services</a>
+                    <a href="#" class="text-decoration-none mb-2 footer-link">Teams</a>
+                    <a href="#" class="text-decoration-none mb-2 footer-link">Teams</a>
                   </div>
                 </div>
               </div>
@@ -723,47 +1313,32 @@
             <!-- Column 2 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4 text-lg-start px-5">
               <div class="d-flex flex-column ms-lg-5 mt-sm-3 ps-5">
-                <a href="#" class=" text-decoration-none mb-2"   style="color:  #E0FFFF";
-                  >About Us</a
-                >
-                <a href="#" class=" text-decoration-none mb-2"     style="color:  #E0FFFF";
-                  >Projects</a
-                >
-                <a href="#" class=" text-decoration-none mb-2"     style="color:  #E0FFFF";
-                  >Projects</a
-                >
+                <a href="#" class="text-decoration-none mb-2 footer-link">About Us</a>
+                <a href="#" class="text-decoration-none mb-2 footer-link">Projects</a>
+                <a href="#" class="text-decoration-none mb-2 footer-link">Projects</a>
               </div>
             </div>
 
             <!-- Column 3 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
               <div class="d-flex flex-column ms-2 mt-sm-3">
-                <a href="Pricing.html" class=" text-decoration-none mb-2"      style="color:  #E0FFFF";
-                  >Pricing</a
-                >
-                <a href="#" class=" text-decoration-none mb-2"       style="color:  #E0FFFF";
-                  >Blogs</a
-                >
-                <a href="#" class=" text-decoration-none mb-2"       style="color:  #E0FFFF";
-                  >Blogs</a
-                >
+                <a href="Pricing.html" class="text-decoration-none mb-2 footer-link">Pricing</a>
+                <a href="#" class="text-decoration-none mb-2 footer-link">Blogs</a>
+                <a href="#" class="text-decoration-none mb-2 footer-link">Blogs</a>
               </div>
             </div>
 
             <!-- Column 4 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-4">
-              <div class="d-flex flex-column mt-sm-3">
-                <a href="#" class=" text-decoration-none mb-2"  style="white-space: nowrap;color:  #E0FFFF
-">
-                  <i class="bi bi-geo-alt-fill me-2" style="font-size: 1.2rem; 
- "></i>Bahria Town, Islamabad,
-                  Pakistan
+            <div class="col-12 col-md-6 col-lg-3 mb-4"  >
+              <div class="d-flex flex-column mt-sm-3"  style="position: relative; right: 20px;" >
+                <a href="#" class="text-decoration-none mb-2 footer-location">
+                  <i class="bi bi-geo-alt-fill me-2 footer-icon"></i>Bahria Town, Islamabad, Pakistan
                 </a>
-                <a href="#" class=" text-decoration-none mb-2" style="color:  #E0FFFF">
-                  <i class="bi bi-telephone-fill me-2" style="font-size: 1.2rem;"></i>+1 (786) 348-7052
+                <a href="#" class="text-decoration-none mb-2 footer-link">
+                  <i class="bi bi-telephone-fill me-2 footer-icon"></i>+1 (786) 348-7052
                 </a>
-                <a href="#" class=" text-decoration-none mb-2"   style="color:  #E0FFFF">
-                  <i class="bi bi-envelope-fill me-2" style="font-size: 1.2rem;"></i>info@primecode.ai
+                <a href="#" class="text-decoration-none mb-2 footer-link">
+                  <i class="bi bi-envelope-fill me-2 footer-icon"></i>info@primecode.ai
                 </a>
               </div>
             </div>
@@ -771,8 +1346,8 @@
 
           <!-- Bottom Row -->
           <div class="row">
-            <img src="tech/we.png" alt="footer" class="img-fluid mt-sm-4 mb-3" style="max-width: 100%;" />
-            <div class="text-center pb-3 pt-2" style="color: #779494; font-size: 0.9rem;">
+            <img src="tech/we.png" alt="footer" class="img-fluid mt-sm-4 mb-3 footer-image" />
+            <div class="text-center pb-3 pt-2 footer-copyright">
               © 2023 Code Prime. All Rights Reserved.
             </div>
           </div>
