@@ -15,10 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
 
     <link rel="icon" type="image/png" href="lgo.png" />
 
@@ -197,15 +197,26 @@
         margin: 0 auto; /* center align if block inside card */
       }
 
-      .tech-icon-wrapper {
-        width: 1163px;
-        height: 91px;
-        display: flex;
-        gap: 43px;
-        position: relative;
-        top: 20px;
-        left: 10px;
-      }
+      .tech-row {
+  width: 1163px;
+  height: 91px;
+  margin: 0 auto;
+  gap: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* ensures all images stay on one line */
+  overflow-x: auto;  /* optional scroll if screen is small */
+}
+
+.tech-icon {
+  width: 91px;
+  height: 91px;
+  border-radius: 227.5px;
+  border: 2.27px solid #000; /* adjust color if needed */
+  object-fit: cover;
+}
+
 
       .tech-heading {
         font-family: "Plus Jakarta Sans", sans-serif;
@@ -279,6 +290,136 @@
           line-height: 1.3 !important;
         }
       }
+
+
+
+
+
+
+
+      /* Removed duplicate arrow-animate styles */
+      /* Apply outer figma constraints */
+.hero-wrapper {
+  width: 1440px;
+  height: 346px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 101px;
+  position: relative;
+  /* background: url('before.png') no-repeat center center;
+  background-size: cover; */
+  z-index: 0;
+}
+
+
+
+/* Foreground content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+.hero-bg-shape {
+  position: absolute;
+  width: 608px;
+  height: 372px;
+  border-radius: 269px;
+  background: #00CED1;
+  opacity: 0.1;
+  filter: blur(200px);
+  top: 0;
+  left: 0;
+
+  z-index: 0;
+}
+
+.hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  width: 207px;
+  height: 20px;
+  color:  #F9FFFF;
+
+  white-space: nowrap;
+  
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.7rem;
+  padding-left: 3rem;
+}
+
+.hero-heading {
+  color: #baffff;
+  font-weight: 700;
+  font-size: 72px;
+  height: 108px;
+  width: 606px;
+  text-shadow: 0 0 20px rgba(186, 255, 255, 0.3);
+  position: relative;
+  bottom: 25px;
+  padding-left: 3rem;
+  vertical-align: middle;
+  
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Hero text box */
+.hero-text-box {
+  width: 497px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* Right column paragraph */
+.hero-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  width: 497px;
+  height: 99px;
+  opacity: 80%;
+  letter-spacing: 0.3px;
+  color: #E0FFFF;
+  position: relative;
+  left: 40px;
+  padding-top: 1rem;
+  text-transform: capitalize;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+/* CTA Button */
+.hero-button {
+  width: 206px;
+  height: 48px;
+  padding: 10px 12px;
+  gap: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00CED1 0%, #20B2AA 100%);
+  box-shadow: 0 4px 15px rgba(0, 206, 209, 0.2);
+  color: #000000;
+  font-weight: 600;
+  position: relative;
+  left: 40px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
     </style>
   </head>
 
@@ -348,41 +489,36 @@
     </nav>
 
     <!-- 2ND PAGE -->
-    <section class="custom-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Left Side -->
-          <div
-            class="col-lg-6 left-text mb-4 mb-lg-0 text-lg-start text-center position-relative"
-          >
-            <div
-              class="bg-blur-shape position-absolute top-50 start-50 translate-middle"
-            ></div>
-            <small class="text-uppercase d-block mb-2">Home/Services</small>
-            <h1 class="display-4 fw-bold mt-2 mb-0 text-gradient text-break">
-              What Can We
-            </h1>
-            <h1 class="display-4 fw-bold text-gradient text-break">
-              Do For You?
-            </h1>
-          </div>
+    <section class="hero-wrapper container py-5 text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-6 px-4 position-relative">
 
-          <!-- Right Side -->
-          <div class="col-lg-6 right-text">
-            <p class="lead ms-lg-3 text-center text-lg-start">
-              Engineering High-Performance Digital Experiences.<br />
-              Creating Smart, Seamless Solutions.<br />
-              Delivering Excellence In Every Project.
+          <!-- background shape -->
+          <div class="hero-bg-shape"></div>
+        
+          <div class="hero-content position-relative">
+            <p class="hero-subtitle">Home/Services</p>
+            <h1 class="hero-heading">What Can We<br>Do For You?</h1>
+          </div>
+        
+        </div>
+        
+    
+        <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0 px-4">
+          <div class="hero-text-box ms-lg-5">
+            <p class="hero-description">
+              Engineering High-Performance Digital Experiences. Creating Smart, Seamless Solutions. Delivering Excellence In Every Project.
             </p>
-            <button
-              class="btn btn-teal btn-gradient px-4 py-2 mt-3 shadow ms-lg-3"
-            >
+            <a href="#" class="btn hero-button">
               Schedule a Meeting
-            </button>
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+
+
 
     <main class="container my-5">
       <div class="row justify-content-center g-4">
@@ -506,9 +642,18 @@
       <div class="container py-5 tech-heading">
         <h2 class="text-center mb-4">Technologies we are working with</h2>
         <div class="row justify-content-center">
-          <div class="col-2 text-center tech-icon-wrapper">
-            <img src="tech/tech.png" alt="React" class="img-fluid" />
+          <div class="tech-row d-flex justify-content-center align-items-center flex-wrap">
+            <img src="tech/1.png" alt="Tech1" class="tech-icon" />
+            <img src="tech/2.png" alt="Tech2" class="tech-icon" />
+            <img src="tech/3.png" alt="Tech3" class="tech-icon" />
+            <img src="tech/4a.png" alt="Tech4" class="tech-icon" />
+            <img src="tech/5.png" alt="Tech5" class="tech-icon" />
+            <img src="tech/6.png" alt="Tech6" class="tech-icon" />
+            <img src="tech/7.png" alt="Tech7" class="tech-icon" />
+            <img src="tech/8.png" alt="Tech8" class="tech-icon" />
+           
           </div>
+          
         </div>
       </div>
 
